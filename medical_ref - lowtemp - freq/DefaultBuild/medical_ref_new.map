@@ -1,0 +1,980 @@
+
+
+
+78K0R Linker W1.70                            Date:26 Jul 2017 Page:   1
+
+Command:   -yD:\Program Files (x86)\Renesas Electronics\CubeSuite+\Devic
+           e\RL78\Devicefile -_msgoff -oDefaultBuild\medical_ref_new.lmf
+            -gi00000000000000000000h -go04h,1FE00h,512 -gb0FFFFEAH -mi0 
+           -s -pDefaultBuild\medical_ref_new.map D:\Program Files (x86)\
+           Renesas Electronics\CubeSuite+\CA78K0R\V1.60\lib78k0r\s0rll.r
+           el DefaultBuild\r_main.rel DefaultBuild\r_systeminit.rel Defa
+           ultBuild\r_cg_cgc.rel DefaultBuild\r_cg_cgc_user.rel DefaultB
+           uild\r_cg_serial.rel DefaultBuild\r_cg_serial_user.rel Defaul
+           tBuild\r_cg_port.rel DefaultBuild\r_cg_port_user.rel DefaultB
+           uild\r_cg_intc.rel DefaultBuild\r_cg_intc_user.rel DefaultBui
+           ld\r_cg_adc.rel DefaultBuild\r_cg_adc_user.rel DefaultBuild\r
+           _cg_timer.rel DefaultBuild\r_cg_timer_user.rel DefaultBuild\r
+           _cg_wdt.rel DefaultBuild\r_cg_wdt_user.rel DefaultBuild\h_ad.
+           rel DefaultBuild\h_adg.rel DefaultBuild\h_bat_ctrl.rel Defaul
+           tBuild\h_com.rel DefaultBuild\h_key_disp.rel DefaultBuild\h_m
+           ain.rel DefaultBuild\h_protect.rel DefaultBuild\h_rom_para2.r
+           el DefaultBuild\M_buzz.rel DefaultBuild\m_compressor.rel Defa
+           ultBuild\m_peripheral_control.rel DefaultBuild\m_key_operatio
+           n.rel DefaultBuild\m_test.rel DefaultBuild\M_RTC.rel -bcl0ram
+           .lib -bcl0rm.lib -bcl0rmf.lib -iD:\Program Files (x86)\Renesa
+           s Electronics\CubeSuite+\CA78K0R\V1.60\lib78k0r
+Para-file:
+Out-file:  DefaultBuild\medical_ref_new.lmf
+Map-file:  DefaultBuild\medical_ref_new.map
+Direc-file:
+Directive:
+
+
+*** Link information ***
+
+    64 output segment(s)
+ A9CDH byte(s) real data
+ 10740 symbol(s) defined
+
+
+*** Memory map ***
+
+
+  SPACE=REGULAR
+
+  MEMORY=ROM
+  BASE ADDRESS=00000H   SIZE=10000H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@VECT00                     00000H    00002H  CSEG AT
+                  @@VECT00 @cstart    00000H    00002H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  @cstart    00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_main     00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_systeminit
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_cgc   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_cgc_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_serial
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_serial_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_port
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_port_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_intc
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_intc_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_adc   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_adc_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_timer
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_timer_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_wdt   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_wdt_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  h_ad       00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  h_adg      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  h_bat_ctrl
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  h_com      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  h_key_disp
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  h_main     00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  h_protect
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  h_rom_para2
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  M_buzz     00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  m_compressor
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  m_peripheral_control
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  m_key_operation
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  m_test     00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  M_RTC      00002H    00000H
+         @@RLINIT                     00002H    00000H  CSEG UNIT64KP
+                  @@RLINIT @cstart    00002H    00000H
+                  @@RLINIT r_main     00002H    00000H
+                  @@RLINIT r_systeminit
+                                      00002H    00000H
+                  @@RLINIT r_cg_cgc   00002H    00000H
+                  @@RLINIT r_cg_cgc_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_serial
+                                      00002H    00000H
+                  @@RLINIT r_cg_serial_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_port
+                                      00002H    00000H
+                  @@RLINIT r_cg_port_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_intc
+                                      00002H    00000H
+                  @@RLINIT r_cg_intc_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_adc   00002H    00000H
+                  @@RLINIT r_cg_adc_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_timer
+                                      00002H    00000H
+                  @@RLINIT r_cg_timer_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_wdt   00002H    00000H
+                  @@RLINIT r_cg_wdt_user
+                                      00002H    00000H
+                  @@RLINIT h_ad       00002H    00000H
+                  @@RLINIT h_adg      00002H    00000H
+                  @@RLINIT h_bat_ctrl
+                                      00002H    00000H
+                  @@RLINIT h_com      00002H    00000H
+                  @@RLINIT h_key_disp
+                                      00002H    00000H
+                  @@RLINIT h_main     00002H    00000H
+                  @@RLINIT h_protect
+                                      00002H    00000H
+                  @@RLINIT h_rom_para2
+                                      00002H    00000H
+                  @@RLINIT M_buzz     00002H    00000H
+                  @@RLINIT m_compressor
+                                      00002H    00000H
+                  @@RLINIT m_peripheral_control
+                                      00002H    00000H
+                  @@RLINIT m_key_operation
+                                      00002H    00000H
+                  @@RLINIT m_test     00002H    00000H
+                  @@RLINIT M_RTC      00002H    00000H
+                  @@RLINIT @rom       00002H    00000H
+         @@R_INIS                     00002H    00000H  CSEG UNIT64KP
+                  @@R_INIS @cstart    00002H    00000H
+                  @@R_INIS r_main     00002H    00000H
+                  @@R_INIS r_systeminit
+                                      00002H    00000H
+                  @@R_INIS r_cg_cgc   00002H    00000H
+                  @@R_INIS r_cg_cgc_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_serial
+                                      00002H    00000H
+                  @@R_INIS r_cg_serial_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_port
+                                      00002H    00000H
+                  @@R_INIS r_cg_port_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_intc
+                                      00002H    00000H
+                  @@R_INIS r_cg_intc_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_adc   00002H    00000H
+                  @@R_INIS r_cg_adc_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_timer
+                                      00002H    00000H
+                  @@R_INIS r_cg_timer_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_wdt   00002H    00000H
+                  @@R_INIS r_cg_wdt_user
+                                      00002H    00000H
+                  @@R_INIS h_ad       00002H    00000H
+                  @@R_INIS h_adg      00002H    00000H
+                  @@R_INIS h_bat_ctrl
+                                      00002H    00000H
+                  @@R_INIS h_com      00002H    00000H
+                  @@R_INIS h_key_disp
+                                      00002H    00000H
+                  @@R_INIS h_main     00002H    00000H
+                  @@R_INIS h_protect
+                                      00002H    00000H
+                  @@R_INIS h_rom_para2
+                                      00002H    00000H
+                  @@R_INIS M_buzz     00002H    00000H
+                  @@R_INIS m_compressor
+                                      00002H    00000H
+                  @@R_INIS m_peripheral_control
+                                      00002H    00000H
+                  @@R_INIS m_key_operation
+                                      00002H    00000H
+                  @@R_INIS m_test     00002H    00000H
+                  @@R_INIS M_RTC      00002H    00000H
+                  @@R_INIS @rom       00002H    00000H
+         @@CALT                       00002H    00000H  CSEG
+                  @@CALT   @cstart    00002H    00000H
+                  @@CALT   r_main     00002H    00000H
+                  @@CALT   r_systeminit
+                                      00002H    00000H
+                  @@CALT   r_cg_cgc   00002H    00000H
+                  @@CALT   r_cg_cgc_user
+                                      00002H    00000H
+                  @@CALT   r_cg_serial
+                                      00002H    00000H
+                  @@CALT   r_cg_serial_user
+                                      00002H    00000H
+                  @@CALT   r_cg_port
+                                      00002H    00000H
+                  @@CALT   r_cg_port_user
+                                      00002H    00000H
+                  @@CALT   r_cg_intc
+                                      00002H    00000H
+                  @@CALT   r_cg_intc_user
+                                      00002H    00000H
+                  @@CALT   r_cg_adc   00002H    00000H
+                  @@CALT   r_cg_adc_user
+                                      00002H    00000H
+                  @@CALT   r_cg_timer
+                                      00002H    00000H
+                  @@CALT   r_cg_timer_user
+                                      00002H    00000H
+                  @@CALT   r_cg_wdt   00002H    00000H
+                  @@CALT   r_cg_wdt_user
+                                      00002H    00000H
+                  @@CALT   h_ad       00002H    00000H
+                  @@CALT   h_adg      00002H    00000H
+                  @@CALT   h_bat_ctrl
+                                      00002H    00000H
+                  @@CALT   h_com      00002H    00000H
+                  @@CALT   h_key_disp
+                                      00002H    00000H
+                  @@CALT   h_main     00002H    00000H
+                  @@CALT   h_protect
+                                      00002H    00000H
+                  @@CALT   h_rom_para2
+                                      00002H    00000H
+                  @@CALT   M_buzz     00002H    00000H
+                  @@CALT   m_compressor
+                                      00002H    00000H
+                  @@CALT   m_peripheral_control
+                                      00002H    00000H
+                  @@CALT   m_key_operation
+                                      00002H    00000H
+                  @@CALT   m_test     00002H    00000H
+                  @@CALT   M_RTC      00002H    00000H
+         ??NMIROM                     00002H    00002H  CSEG
+         @@VECT04                     00004H    00002H  CSEG AT
+                  @@VECT04 r_cg_wdt_user
+                                      00004H    00002H
+         @@R_INIT                     00006H    00002H  CSEG UNIT64KP
+                  @@R_INIT @cstart    00006H    00000H
+                  @@R_INIT r_main     00006H    00000H
+                  @@R_INIT r_systeminit
+                                      00006H    00000H
+                  @@R_INIT r_cg_cgc   00006H    00000H
+                  @@R_INIT r_cg_cgc_user
+                                      00006H    00000H
+                  @@R_INIT r_cg_serial
+                                      00006H    00000H
+                  @@R_INIT r_cg_serial_user
+                                      00006H    00000H
+                  @@R_INIT r_cg_port
+                                      00006H    00000H
+                  @@R_INIT r_cg_port_user
+                                      00006H    00000H
+                  @@R_INIT r_cg_intc
+                                      00006H    00000H
+                  @@R_INIT r_cg_intc_user
+                                      00006H    00000H
+                  @@R_INIT r_cg_adc   00006H    00000H
+                  @@R_INIT r_cg_adc_user
+                                      00006H    00000H
+                  @@R_INIT r_cg_timer
+                                      00006H    00000H
+                  @@R_INIT r_cg_timer_user
+                                      00006H    00000H
+                  @@R_INIT r_cg_wdt   00006H    00000H
+                  @@R_INIT r_cg_wdt_user
+                                      00006H    00000H
+                  @@R_INIT h_ad       00006H    00000H
+                  @@R_INIT h_adg      00006H    00000H
+                  @@R_INIT h_bat_ctrl
+                                      00006H    00000H
+                  @@R_INIT h_com      00006H    00002H
+                  @@R_INIT h_key_disp
+                                      00008H    00000H
+                  @@R_INIT h_main     00008H    00000H
+                  @@R_INIT h_protect
+                                      00008H    00000H
+                  @@R_INIT h_rom_para2
+                                      00008H    00000H
+                  @@R_INIT M_buzz     00008H    00000H
+                  @@R_INIT m_compressor
+                                      00008H    00000H
+                  @@R_INIT m_peripheral_control
+                                      00008H    00000H
+                  @@R_INIT m_key_operation
+                                      00008H    00000H
+                  @@R_INIT m_test     00008H    00000H
+                  @@R_INIT M_RTC      00008H    00000H
+                  @@R_INIT @rom       00008H    00000H
+* gap *                               00008H    0000CH
+         @@VECT14                     00014H    00004H  CSEG AT
+                  @@VECT14 r_cg_serial_user
+                                      00014H    00004H
+* gap *                               00018H    00006H
+         @@VECT1E                     0001EH    00004H  CSEG AT
+                  @@VECT1E r_cg_serial_user
+                                      0001EH    00004H
+* gap *                               00022H    00002H
+         @@VECT24                     00024H    00004H  CSEG AT
+                  @@VECT24 r_cg_serial_user
+                                      00024H    00004H
+* gap *                               00028H    00002H
+         @@VECT2A                     0002AH    00002H  CSEG AT
+                  @@VECT2A r_cg_serial_user
+                                      0002AH    00002H
+* gap *                               0002CH    00004H
+         @@VECT30                     00030H    00002H  CSEG AT
+                  @@VECT30 r_cg_timer_user
+                                      00030H    00002H
+* gap *                               00032H    0000AH
+         @@VECT3C                     0003CH    00004H  CSEG AT
+                  @@VECT3C r_cg_serial_user
+                                      0003CH    00004H
+* gap *                               00040H    00002H
+         @@VECT42                     00042H    00004H  CSEG AT
+                  @@VECT42 r_cg_timer_user
+                                      00042H    00004H
+* gap *                               00046H    0000CH
+         @@VECT52                     00052H    00002H  CSEG AT
+                  @@VECT52 r_cg_intc_user
+                                      00052H    00002H
+* gap *                               00054H    0006CH
+         ?CSEGOB0                     000C0H    00004H  CSEG OPT_BYTE
+         @@CODE                       000C4H    00000H  CSEG BASE
+                  @@CODE   r_main     000C4H    00000H
+                  @@CODE   r_systeminit
+                                      000C4H    00000H
+                  @@CODE   r_cg_cgc   000C4H    00000H
+                  @@CODE   r_cg_cgc_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_serial
+                                      000C4H    00000H
+                  @@CODE   r_cg_serial_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_port
+                                      000C4H    00000H
+                  @@CODE   r_cg_port_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_intc
+                                      000C4H    00000H
+                  @@CODE   r_cg_intc_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_adc   000C4H    00000H
+                  @@CODE   r_cg_adc_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_timer
+                                      000C4H    00000H
+                  @@CODE   r_cg_timer_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_wdt   000C4H    00000H
+                  @@CODE   r_cg_wdt_user
+                                      000C4H    00000H
+                  @@CODE   h_ad       000C4H    00000H
+                  @@CODE   h_adg      000C4H    00000H
+                  @@CODE   h_bat_ctrl
+                                      000C4H    00000H
+                  @@CODE   h_com      000C4H    00000H
+                  @@CODE   h_key_disp
+                                      000C4H    00000H
+                  @@CODE   h_main     000C4H    00000H
+                  @@CODE   h_protect
+                                      000C4H    00000H
+                  @@CODE   h_rom_para2
+                                      000C4H    00000H
+                  @@CODE   M_buzz     000C4H    00000H
+                  @@CODE   m_compressor
+                                      000C4H    00000H
+                  @@CODE   m_peripheral_control
+                                      000C4H    00000H
+                  @@CODE   m_key_operation
+                                      000C4H    00000H
+                  @@CODE   m_test     000C4H    00000H
+                  @@CODE   M_RTC      000C4H    00000H
+         ?CSEGSI                      000C4H    0000AH  CSEG
+         ?OCDSTAD                     000CEH    0000AH  CSEG
+         @@LCODE                      000D8H    00293H  CSEG BASE
+                  @@LCODE  @cstart    000D8H    000ADH
+                  @@LCODE  @imul      00185H    00011H
+                  @@LCODE  @lmul      00196H    0002BH
+                  @@LCODE  @isdiv     001C1H    00022H
+                  @@LCODE  @iudiv     001E3H    0002DH
+                  @@LCODE  @isrem     00210H    00021H
+                  @@LCODE  @iurem     00231H    0002FH
+                  @@LCODE  @lsdiv     00260H    00039H
+                  @@LCODE  @ludiv     00299H    0003FH
+                  @@LCODE  @divuw     002D8H    00034H
+                  @@LCODE  @ladd      0030CH    0000FH
+                  @@LCODE  @lsub      0031BH    00012H
+                  @@LCODE  @lsrsh     0032DH    0001FH
+                  @@LCODE  @lursh     0034CH    0001FH
+         @@BASE                       0036BH    002A9H  CSEG BASE
+                  @@BASE   r_main     0036BH    00000H
+                  @@BASE   r_systeminit
+                                      0036BH    00000H
+                  @@BASE   r_cg_cgc   0036BH    00000H
+                  @@BASE   r_cg_cgc_user
+                                      0036BH    00000H
+                  @@BASE   r_cg_serial
+                                      0036BH    00000H
+                  @@BASE   r_cg_serial_user
+                                      0036BH    001EBH
+                  @@BASE   r_cg_port
+                                      00556H    00000H
+                  @@BASE   r_cg_port_user
+                                      00556H    00000H
+                  @@BASE   r_cg_intc
+                                      00556H    00000H
+                  @@BASE   r_cg_intc_user
+                                      00556H    00002H
+                  @@BASE   r_cg_adc   00558H    00000H
+                  @@BASE   r_cg_adc_user
+                                      00558H    00000H
+                  @@BASE   r_cg_timer
+                                      00558H    00000H
+                  @@BASE   r_cg_timer_user
+                                      00558H    000BAH
+                  @@BASE   r_cg_wdt   00612H    00000H
+                  @@BASE   r_cg_wdt_user
+                                      00612H    00002H
+                  @@BASE   h_ad       00614H    00000H
+                  @@BASE   h_adg      00614H    00000H
+                  @@BASE   h_bat_ctrl
+                                      00614H    00000H
+                  @@BASE   h_com      00614H    00000H
+                  @@BASE   h_key_disp
+                                      00614H    00000H
+                  @@BASE   h_main     00614H    00000H
+                  @@BASE   h_protect
+                                      00614H    00000H
+                  @@BASE   h_rom_para2
+                                      00614H    00000H
+                  @@BASE   M_buzz     00614H    00000H
+                  @@BASE   m_compressor
+                                      00614H    00000H
+                  @@BASE   m_peripheral_control
+                                      00614H    00000H
+                  @@BASE   m_key_operation
+                                      00614H    00000H
+                  @@BASE   m_test     00614H    00000H
+                  @@BASE   M_RTC      00614H    00000H
+         @@LCODEL                     00614H    00060H  CSEG
+                  @@LCODEL @stkinit   00614H    00044H
+                  @@LCODEL exit       00658H    0001CH
+* gap *                               00674H    0298CH
+         @@CNST                       03000H    01C84H  CSEG MIRRORP
+                  @@CNST   @cstart    03000H    00000H
+                  @@CNST   r_main     03000H    00000H
+                  @@CNST   r_systeminit
+                                      03000H    00000H
+                  @@CNST   r_cg_cgc   03000H    00000H
+                  @@CNST   r_cg_cgc_user
+                                      03000H    00000H
+                  @@CNST   r_cg_serial
+                                      03000H    00000H
+                  @@CNST   r_cg_serial_user
+                                      03000H    00000H
+                  @@CNST   r_cg_port
+                                      03000H    00000H
+                  @@CNST   r_cg_port_user
+                                      03000H    00000H
+                  @@CNST   r_cg_intc
+                                      03000H    00000H
+                  @@CNST   r_cg_intc_user
+                                      03000H    00000H
+                  @@CNST   r_cg_adc   03000H    00000H
+                  @@CNST   r_cg_adc_user
+                                      03000H    00000H
+                  @@CNST   r_cg_timer
+                                      03000H    00000H
+                  @@CNST   r_cg_timer_user
+                                      03000H    00000H
+                  @@CNST   r_cg_wdt   03000H    00000H
+                  @@CNST   r_cg_wdt_user
+                                      03000H    00000H
+                  @@CNST   h_ad       03000H    00B4CH
+                  @@CNST   h_adg      03B4CH    007B0H
+                  @@CNST   h_bat_ctrl
+                                      042FCH    00000H
+                  @@CNST   h_com      042FCH    00000H
+                  @@CNST   h_key_disp
+                                      042FCH    0000AH
+                  @@CNST   h_main     04306H    00014H
+                  @@CNST   h_protect
+                                      0431AH    00000H
+                  @@CNST   h_rom_para2
+                                      0431AH    00942H
+                  @@CNST   M_buzz     04C5CH    00000H
+                  @@CNST   m_compressor
+                                      04C5CH    00000H
+                  @@CNST   m_peripheral_control
+                                      04C5CH    00000H
+                  @@CNST   m_key_operation
+                                      04C5CH    00000H
+                  @@CNST   m_test     04C5CH    00000H
+                  @@CNST   M_RTC      04C5CH    00028H
+         @@CODEL                      04C84H    08773H  CSEG
+                  @@CODEL  r_main     04C84H    00031H
+                  @@CODEL  r_systeminit
+                                      04CB5H    0003EH
+                  @@CODEL  r_cg_cgc   04CF3H    00017H
+                  @@CODEL  r_cg_cgc_user
+                                      04D0AH    0000CH
+                  @@CODEL  r_cg_serial
+                                      04D16H    0062FH
+                  @@CODEL  r_cg_serial_user
+                                      05345H    0009CH
+                  @@CODEL  r_cg_port
+                                      053E1H    00053H
+                  @@CODEL  r_cg_port_user
+                                      05434H    00000H
+                  @@CODEL  r_cg_intc
+                                      05434H    00066H
+                  @@CODEL  r_cg_intc_user
+                                      0549AH    00000H
+                  @@CODEL  r_cg_adc   0549AH    0004FH
+                  @@CODEL  r_cg_adc_user
+                                      054E9H    00000H
+                  @@CODEL  r_cg_timer
+                                      054E9H    00334H
+                  @@CODEL  r_cg_timer_user
+                                      0581DH    00000H
+                  @@CODEL  r_cg_wdt   0581DH    00014H
+                  @@CODEL  r_cg_wdt_user
+                                      05831H    00000H
+                  @@CODEL  h_ad       05831H    00784H
+                  @@CODEL  h_adg      05FB5H    00AD6H
+                  @@CODEL  h_bat_ctrl
+                                      06A8BH    003EFH
+                  @@CODEL  h_com      06E7AH    019D5H
+                  @@CODEL  h_key_disp
+                                      0884FH    012E3H
+                  @@CODEL  h_main     09B32H    007EBH
+                  @@CODEL  h_protect
+                                      0A31DH    008B0H
+                  @@CODEL  h_rom_para2
+                                      0ABCDH    00000H
+                  @@CODEL  M_buzz     0ABCDH    000E4H
+                  @@CODEL  m_compressor
+                                      0ACB1H    00388H
+                  @@CODEL  m_peripheral_control
+                                      0B039H    002CCH
+                  @@CODEL  m_key_operation
+                                      0B305H    019D2H
+                  @@CODEL  m_test     0CCD7H    00234H
+                  @@CODEL  M_RTC      0CF0BH    004ECH
+* gap *                               0D3F7H    02C09H
+
+  MEMORY=RAM
+  BASE ADDRESS=FCF00H   SIZE=03100H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@DATA                       FCF00H    00672H  DSEG BASEP
+                  @@DATA   @cstart    FCF00H    000BAH
+                  @@DATA   r_main     FCFBAH    00000H
+                  @@DATA   r_systeminit
+                                      FCFBAH    00000H
+                  @@DATA   r_cg_cgc   FCFBAH    00000H
+                  @@DATA   r_cg_cgc_user
+                                      FCFBAH    00000H
+                  @@DATA   r_cg_serial
+                                      FCFBAH    00034H
+                  @@DATA   r_cg_serial_user
+                                      FCFEEH    00000H
+                  @@DATA   r_cg_port
+                                      FCFEEH    00000H
+                  @@DATA   r_cg_port_user
+                                      FCFEEH    00000H
+                  @@DATA   r_cg_intc
+                                      FCFEEH    00000H
+                  @@DATA   r_cg_intc_user
+                                      FCFEEH    00000H
+                  @@DATA   r_cg_adc   FCFEEH    00000H
+                  @@DATA   r_cg_adc_user
+                                      FCFEEH    00000H
+                  @@DATA   r_cg_timer
+                                      FCFEEH    00000H
+                  @@DATA   r_cg_timer_user
+                                      FCFEEH    00000H
+                  @@DATA   r_cg_wdt   FCFEEH    00000H
+                  @@DATA   r_cg_wdt_user
+                                      FCFEEH    00000H
+                  @@DATA   h_ad       FCFEEH    000B8H
+                  @@DATA   h_adg      FD0A6H    00066H
+                  @@DATA   h_bat_ctrl
+                                      FD10CH    0000EH
+                  @@DATA   h_com      FD11AH    000F6H
+                  @@DATA   h_key_disp
+                                      FD210H    00040H
+                  @@DATA   h_main     FD250H    00012H
+                  @@DATA   h_protect
+                                      FD262H    00030H
+                  @@DATA   h_rom_para2
+                                      FD292H    001DAH
+                  @@DATA   M_buzz     FD46CH    00008H
+                  @@DATA   m_compressor
+                                      FD474H    00050H
+                  @@DATA   m_peripheral_control
+                                      FD4C4H    0000CH
+                  @@DATA   m_key_operation
+                                      FD4D0H    00082H
+                  @@DATA   m_test     FD552H    00008H
+                  @@DATA   M_RTC      FD55AH    00018H
+                  @@DATA   @rom       FD572H    00000H
+         @@INIT                       FD572H    00002H  DSEG BASEP
+                  @@INIT   @cstart    FD572H    00000H
+                  @@INIT   r_main     FD572H    00000H
+                  @@INIT   r_systeminit
+                                      FD572H    00000H
+                  @@INIT   r_cg_cgc   FD572H    00000H
+                  @@INIT   r_cg_cgc_user
+                                      FD572H    00000H
+                  @@INIT   r_cg_serial
+                                      FD572H    00000H
+                  @@INIT   r_cg_serial_user
+                                      FD572H    00000H
+                  @@INIT   r_cg_port
+                                      FD572H    00000H
+                  @@INIT   r_cg_port_user
+                                      FD572H    00000H
+                  @@INIT   r_cg_intc
+                                      FD572H    00000H
+                  @@INIT   r_cg_intc_user
+                                      FD572H    00000H
+                  @@INIT   r_cg_adc   FD572H    00000H
+                  @@INIT   r_cg_adc_user
+                                      FD572H    00000H
+                  @@INIT   r_cg_timer
+                                      FD572H    00000H
+                  @@INIT   r_cg_timer_user
+                                      FD572H    00000H
+                  @@INIT   r_cg_wdt   FD572H    00000H
+                  @@INIT   r_cg_wdt_user
+                                      FD572H    00000H
+                  @@INIT   h_ad       FD572H    00000H
+                  @@INIT   h_adg      FD572H    00000H
+                  @@INIT   h_bat_ctrl
+                                      FD572H    00000H
+                  @@INIT   h_com      FD572H    00002H
+                  @@INIT   h_key_disp
+                                      FD574H    00000H
+                  @@INIT   h_main     FD574H    00000H
+                  @@INIT   h_protect
+                                      FD574H    00000H
+                  @@INIT   h_rom_para2
+                                      FD574H    00000H
+                  @@INIT   M_buzz     FD574H    00000H
+                  @@INIT   m_compressor
+                                      FD574H    00000H
+                  @@INIT   m_peripheral_control
+                                      FD574H    00000H
+                  @@INIT   m_key_operation
+                                      FD574H    00000H
+                  @@INIT   m_test     FD574H    00000H
+                  @@INIT   M_RTC      FD574H    00000H
+                  @@INIT   @rom       FD574H    00000H
+         @@INIS                       FD574H    00000H  DSEG UNITP
+                  @@INIS   @cstart    FD574H    00000H
+                  @@INIS   r_main     FD574H    00000H
+                  @@INIS   r_systeminit
+                                      FD574H    00000H
+                  @@INIS   r_cg_cgc   FD574H    00000H
+                  @@INIS   r_cg_cgc_user
+                                      FD574H    00000H
+                  @@INIS   r_cg_serial
+                                      FD574H    00000H
+                  @@INIS   r_cg_serial_user
+                                      FD574H    00000H
+                  @@INIS   r_cg_port
+                                      FD574H    00000H
+                  @@INIS   r_cg_port_user
+                                      FD574H    00000H
+                  @@INIS   r_cg_intc
+                                      FD574H    00000H
+                  @@INIS   r_cg_intc_user
+                                      FD574H    00000H
+                  @@INIS   r_cg_adc   FD574H    00000H
+                  @@INIS   r_cg_adc_user
+                                      FD574H    00000H
+                  @@INIS   r_cg_timer
+                                      FD574H    00000H
+                  @@INIS   r_cg_timer_user
+                                      FD574H    00000H
+                  @@INIS   r_cg_wdt   FD574H    00000H
+                  @@INIS   r_cg_wdt_user
+                                      FD574H    00000H
+                  @@INIS   h_ad       FD574H    00000H
+                  @@INIS   h_adg      FD574H    00000H
+                  @@INIS   h_bat_ctrl
+                                      FD574H    00000H
+                  @@INIS   h_com      FD574H    00000H
+                  @@INIS   h_key_disp
+                                      FD574H    00000H
+                  @@INIS   h_main     FD574H    00000H
+                  @@INIS   h_protect
+                                      FD574H    00000H
+                  @@INIS   h_rom_para2
+                                      FD574H    00000H
+                  @@INIS   M_buzz     FD574H    00000H
+                  @@INIS   m_compressor
+                                      FD574H    00000H
+                  @@INIS   m_peripheral_control
+                                      FD574H    00000H
+                  @@INIS   m_key_operation
+                                      FD574H    00000H
+                  @@INIS   m_test     FD574H    00000H
+                  @@INIS   M_RTC      FD574H    00000H
+                  @@INIS   @rom       FD574H    00000H
+         @@DATS                       FD574H    00000H  DSEG UNITP
+                  @@DATS   @cstart    FD574H    00000H
+                  @@DATS   r_main     FD574H    00000H
+                  @@DATS   r_systeminit
+                                      FD574H    00000H
+                  @@DATS   r_cg_cgc   FD574H    00000H
+                  @@DATS   r_cg_cgc_user
+                                      FD574H    00000H
+                  @@DATS   r_cg_serial
+                                      FD574H    00000H
+                  @@DATS   r_cg_serial_user
+                                      FD574H    00000H
+                  @@DATS   r_cg_port
+                                      FD574H    00000H
+                  @@DATS   r_cg_port_user
+                                      FD574H    00000H
+                  @@DATS   r_cg_intc
+                                      FD574H    00000H
+                  @@DATS   r_cg_intc_user
+                                      FD574H    00000H
+                  @@DATS   r_cg_adc   FD574H    00000H
+                  @@DATS   r_cg_adc_user
+                                      FD574H    00000H
+                  @@DATS   r_cg_timer
+                                      FD574H    00000H
+                  @@DATS   r_cg_timer_user
+                                      FD574H    00000H
+                  @@DATS   r_cg_wdt   FD574H    00000H
+                  @@DATS   r_cg_wdt_user
+                                      FD574H    00000H
+                  @@DATS   h_ad       FD574H    00000H
+                  @@DATS   h_adg      FD574H    00000H
+                  @@DATS   h_bat_ctrl
+                                      FD574H    00000H
+                  @@DATS   h_com      FD574H    00000H
+                  @@DATS   h_key_disp
+                                      FD574H    00000H
+                  @@DATS   h_main     FD574H    00000H
+                  @@DATS   h_protect
+                                      FD574H    00000H
+                  @@DATS   h_rom_para2
+                                      FD574H    00000H
+                  @@DATS   M_buzz     FD574H    00000H
+                  @@DATS   m_compressor
+                                      FD574H    00000H
+                  @@DATS   m_peripheral_control
+                                      FD574H    00000H
+                  @@DATS   m_key_operation
+                                      FD574H    00000H
+                  @@DATS   m_test     FD574H    00000H
+                  @@DATS   M_RTC      FD574H    00000H
+                  @@DATS   @rom       FD574H    00000H
+         @@INITL                      FD574H    00000H  DSEG UNIT64KP
+                  @@INITL  @cstart    FD574H    00000H
+                  @@INITL  r_main     FD574H    00000H
+                  @@INITL  r_systeminit
+                                      FD574H    00000H
+                  @@INITL  r_cg_cgc   FD574H    00000H
+                  @@INITL  r_cg_cgc_user
+                                      FD574H    00000H
+                  @@INITL  r_cg_serial
+                                      FD574H    00000H
+                  @@INITL  r_cg_serial_user
+                                      FD574H    00000H
+                  @@INITL  r_cg_port
+                                      FD574H    00000H
+                  @@INITL  r_cg_port_user
+                                      FD574H    00000H
+                  @@INITL  r_cg_intc
+                                      FD574H    00000H
+                  @@INITL  r_cg_intc_user
+                                      FD574H    00000H
+                  @@INITL  r_cg_adc   FD574H    00000H
+                  @@INITL  r_cg_adc_user
+                                      FD574H    00000H
+                  @@INITL  r_cg_timer
+                                      FD574H    00000H
+                  @@INITL  r_cg_timer_user
+                                      FD574H    00000H
+                  @@INITL  r_cg_wdt   FD574H    00000H
+                  @@INITL  r_cg_wdt_user
+                                      FD574H    00000H
+                  @@INITL  h_ad       FD574H    00000H
+                  @@INITL  h_adg      FD574H    00000H
+                  @@INITL  h_bat_ctrl
+                                      FD574H    00000H
+                  @@INITL  h_com      FD574H    00000H
+                  @@INITL  h_key_disp
+                                      FD574H    00000H
+                  @@INITL  h_main     FD574H    00000H
+                  @@INITL  h_protect
+                                      FD574H    00000H
+                  @@INITL  h_rom_para2
+                                      FD574H    00000H
+                  @@INITL  M_buzz     FD574H    00000H
+                  @@INITL  m_compressor
+                                      FD574H    00000H
+                  @@INITL  m_peripheral_control
+                                      FD574H    00000H
+                  @@INITL  m_key_operation
+                                      FD574H    00000H
+                  @@INITL  m_test     FD574H    00000H
+                  @@INITL  M_RTC      FD574H    00000H
+                  @@INITL  @rom       FD574H    00000H
+         @@DATAL                      FD574H    00000H  DSEG UNIT64KP
+                  @@DATAL  @cstart    FD574H    00000H
+                  @@DATAL  r_main     FD574H    00000H
+                  @@DATAL  r_systeminit
+                                      FD574H    00000H
+                  @@DATAL  r_cg_cgc   FD574H    00000H
+                  @@DATAL  r_cg_cgc_user
+                                      FD574H    00000H
+                  @@DATAL  r_cg_serial
+                                      FD574H    00000H
+                  @@DATAL  r_cg_serial_user
+                                      FD574H    00000H
+                  @@DATAL  r_cg_port
+                                      FD574H    00000H
+                  @@DATAL  r_cg_port_user
+                                      FD574H    00000H
+                  @@DATAL  r_cg_intc
+                                      FD574H    00000H
+                  @@DATAL  r_cg_intc_user
+                                      FD574H    00000H
+                  @@DATAL  r_cg_adc   FD574H    00000H
+                  @@DATAL  r_cg_adc_user
+                                      FD574H    00000H
+                  @@DATAL  r_cg_timer
+                                      FD574H    00000H
+                  @@DATAL  r_cg_timer_user
+                                      FD574H    00000H
+                  @@DATAL  r_cg_wdt   FD574H    00000H
+                  @@DATAL  r_cg_wdt_user
+                                      FD574H    00000H
+                  @@DATAL  h_ad       FD574H    00000H
+                  @@DATAL  h_adg      FD574H    00000H
+                  @@DATAL  h_bat_ctrl
+                                      FD574H    00000H
+                  @@DATAL  h_com      FD574H    00000H
+                  @@DATAL  h_key_disp
+                                      FD574H    00000H
+                  @@DATAL  h_main     FD574H    00000H
+                  @@DATAL  h_protect
+                                      FD574H    00000H
+                  @@DATAL  h_rom_para2
+                                      FD574H    00000H
+                  @@DATAL  M_buzz     FD574H    00000H
+                  @@DATAL  m_compressor
+                                      FD574H    00000H
+                  @@DATAL  m_peripheral_control
+                                      FD574H    00000H
+                  @@DATAL  m_key_operation
+                                      FD574H    00000H
+                  @@DATAL  m_test     FD574H    00000H
+                  @@DATAL  M_RTC      FD574H    00000H
+                  @@DATAL  @rom       FD574H    00000H
+         @@BITS                       FD574H    00000H  BSEG
+                  @@BITS   @cstart    FD574H.0  00000H.0
+                  @@BITS   r_main     FD574H.0  00000H.0
+                  @@BITS   r_systeminit
+                                      FD574H.0  00000H.0
+                  @@BITS   r_cg_cgc   FD574H.0  00000H.0
+                  @@BITS   r_cg_cgc_user
+                                      FD574H.0  00000H.0
+                  @@BITS   r_cg_serial
+                                      FD574H.0  00000H.0
+                  @@BITS   r_cg_serial_user
+                                      FD574H.0  00000H.0
+                  @@BITS   r_cg_port
+                                      FD574H.0  00000H.0
+                  @@BITS   r_cg_port_user
+                                      FD574H.0  00000H.0
+                  @@BITS   r_cg_intc
+                                      FD574H.0  00000H.0
+                  @@BITS   r_cg_intc_user
+                                      FD574H.0  00000H.0
+                  @@BITS   r_cg_adc   FD574H.0  00000H.0
+                  @@BITS   r_cg_adc_user
+                                      FD574H.0  00000H.0
+                  @@BITS   r_cg_timer
+                                      FD574H.0  00000H.0
+                  @@BITS   r_cg_timer_user
+                                      FD574H.0  00000H.0
+                  @@BITS   r_cg_wdt   FD574H.0  00000H.0
+                  @@BITS   r_cg_wdt_user
+                                      FD574H.0  00000H.0
+                  @@BITS   h_ad       FD574H.0  00000H.0
+                  @@BITS   h_adg      FD574H.0  00000H.0
+                  @@BITS   h_bat_ctrl
+                                      FD574H.0  00000H.0
+                  @@BITS   h_com      FD574H.0  00000H.0
+                  @@BITS   h_key_disp
+                                      FD574H.0  00000H.0
+                  @@BITS   h_main     FD574H.0  00000H.0
+                  @@BITS   h_protect
+                                      FD574H.0  00000H.0
+                  @@BITS   h_rom_para2
+                                      FD574H.0  00000H.0
+                  @@BITS   M_buzz     FD574H.0  00000H.0
+                  @@BITS   m_compressor
+                                      FD574H.0  00000H.0
+                  @@BITS   m_peripheral_control
+                                      FD574H.0  00000H.0
+                  @@BITS   m_key_operation
+                                      FD574H.0  00000H.0
+                  @@BITS   m_test     FD574H.0  00000H.0
+                  @@BITS   M_RTC      FD574H.0  00000H.0
+* gap *                               FD574H    02960H
+         @@SEGREG                     FFED4H    00004H  DSEG AT
+                  @@SEGREG @SEGREG    FFED4H    00004H
+         @@RTARG0                     FFED8H    00008H  DSEG AT
+                  @@RTARG0 @RTARG0    FFED8H    00008H
+* gap *                               FFEE0H    00020H
+* gap (Not Free Area) *               FFF00H    00100H
+
+
+ Target chip : R5F100PG
+ Device file : V1.12
+
