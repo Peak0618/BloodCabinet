@@ -1,7 +1,7 @@
 
 
 
-78K0R Linker W1.70                            Date:26 Jul 2017 Page:   1
+78K0R Linker W1.70                            Date:27 Jul 2017 Page:   1
 
 Command:   -yD:\Program Files (x86)\Renesas Electronics\CubeSuite+\Devic
            e\RL78\Devicefile -_msgoff -oDefaultBuild\medical_ref_new.lmf
@@ -34,8 +34,8 @@ Directive:
 *** Link information ***
 
     64 output segment(s)
- A9CDH byte(s) real data
- 10740 symbol(s) defined
+ A9DFH byte(s) real data
+ 10756 symbol(s) defined
 
 
 *** Memory map ***
@@ -547,7 +547,7 @@ Directive:
                                       04C5CH    00000H
                   @@CNST   m_test     04C5CH    00000H
                   @@CNST   M_RTC      04C5CH    00028H
-         @@CODEL                      04C84H    08773H  CSEG
+         @@CODEL                      04C84H    08785H  CSEG
                   @@CODEL  r_main     04C84H    00031H
                   @@CODEL  r_systeminit
                                       04CB5H    0003EH
@@ -580,24 +580,24 @@ Directive:
                   @@CODEL  h_adg      05FB5H    00AD6H
                   @@CODEL  h_bat_ctrl
                                       06A8BH    003EFH
-                  @@CODEL  h_com      06E7AH    019D5H
+                  @@CODEL  h_com      06E7AH    019E9H
                   @@CODEL  h_key_disp
-                                      0884FH    012E3H
-                  @@CODEL  h_main     09B32H    007EBH
+                                      08863H    012E3H
+                  @@CODEL  h_main     09B46H    007E3H
                   @@CODEL  h_protect
-                                      0A31DH    008B0H
+                                      0A329H    008B0H
                   @@CODEL  h_rom_para2
-                                      0ABCDH    00000H
-                  @@CODEL  M_buzz     0ABCDH    000E4H
+                                      0ABD9H    00000H
+                  @@CODEL  M_buzz     0ABD9H    000E8H
                   @@CODEL  m_compressor
-                                      0ACB1H    00388H
+                                      0ACC1H    00388H
                   @@CODEL  m_peripheral_control
-                                      0B039H    002CCH
+                                      0B049H    002CCH
                   @@CODEL  m_key_operation
-                                      0B305H    019D2H
-                  @@CODEL  m_test     0CCD7H    00234H
-                  @@CODEL  M_RTC      0CF0BH    004ECH
-* gap *                               0D3F7H    02C09H
+                                      0B315H    019D4H
+                  @@CODEL  m_test     0CCE9H    00234H
+                  @@CODEL  M_RTC      0CF1DH    004ECH
+* gap *                               0D409H    02BF7H
 
   MEMORY=RAM
   BASE ADDRESS=FCF00H   SIZE=03100H

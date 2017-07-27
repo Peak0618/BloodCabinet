@@ -172,7 +172,7 @@ void buzz_sound_priority(void)
             if(bflg_buzz_one_tick_set == 0)  //无响一声时
             {
                 //包工注释
-                //buzz_loop_tick();
+                buzz_loop_tick();
             }
         }
     }

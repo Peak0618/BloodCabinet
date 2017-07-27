@@ -133,7 +133,7 @@ extern flag_type bflg_key_operation_save;
        #define   bflg_usb_set_time                      bflg_key_operation_save.bits.bit2   //表示有设置时间动作让usb修改时间
        #define   bflg_key_password_long_valid           bflg_key_operation_save.bits.bit3   //IC注册、解锁、工厂3类密码长按xs后按加10的步进增加
        #define   bflg_key_password_long_valid_delaytime bflg_key_operation_save.bits.bit4   //输入密码时长按延时
-
+       #define   bflg_expand_unlock                     bflg_key_operation_save.bits.bit5   //发送给扩展板的开锁指令
 //变量定义
 extern uint8_t   guc_key_val;                      //按键键值
 extern uint8_t   guc_TUTD_dis_type;                //选择显示上温 或下温或上下温平均值

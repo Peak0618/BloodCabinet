@@ -145,8 +145,8 @@ void system_init(void)   //系统初始化程序
     
     switch_init();            //拨码开关初始化
     //----------------------------------
-    init_ram_para2();         // peak 烧写E2，新板子要先写一次；
-    init_ram_para();
+    //init_ram_para2();         // peak 烧写E2，新板子要先写一次；
+    //init_ram_para();
     
     eeprom2_read_deal();     //eeprom2读取处理程序
     eeprom_read_deal();      //eeprom读取处理程序
@@ -234,10 +234,6 @@ void control_init(void)
 
     bflg_usb_delaytime = 1;
     gss_usb_delaytime = 0;
-    //debug
-    //bflg_com_type = 1;
-    //guc_com_bus_add = 1;
-    //bflg_com_type_ok = 1;
 }
 //------------------------------------------------------------------------------
 void system_start(void)  //系统启动程序

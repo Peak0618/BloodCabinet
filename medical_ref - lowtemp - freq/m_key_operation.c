@@ -2198,7 +2198,8 @@ void IC_unlock_deal(void)
     {
         if(guc_IC_access_state == 1)
         {
-            LOCK_OUT_PIN = 1;          //锁打开
+            //LOCK_OUT_PIN = 1;          //锁打开--血液的锁放到扩展板上
+            bflg_expand_unlock = 1;
             guc_IC_access_state = 0;
 
             bflg_lock_delaytimer = 1;  //开锁的延时标志
@@ -2222,7 +2223,9 @@ void IC_unlock_delaytime(void)
             bflg_lock_delaytimer = 0;
             guc_lock_delaytimer = 0;
 
-            LOCK_OUT_PIN = 0;
+            //LOCK_OUT_PIN = 0;
+            
+            bflg_expand_unlock = 0;
         }
     }
 }

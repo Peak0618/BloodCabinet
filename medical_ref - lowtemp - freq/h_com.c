@@ -673,16 +673,30 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                 guc_com_tx_buffer[6] = 14;       //发送的数据字节数
 
                 //upgrade--> gss_tmp.ubyte.low
-                guc_com_tx_buffer[7] |= (uint8_t)(gss_factory_parm_value[DISP_FAC_Ct6]>>8);  //环温校准H-放大10
-                guc_com_tx_buffer[8] |= (uint8_t)gss_factory_parm_value[DISP_FAC_Ct6];       //L
-                guc_com_tx_buffer[9] |= (uint8_t)(gss_factory_parm_value[DISP_FAC_Ct7]>>8)；  //湿度校准
-                guc_com_tx_buffer[10]|= (uint8_t)gss_factory_parm_value[DISP_FAC_Ct7];       //L
+                guc_com_tx_buffer[7] |= (uint8_t)(gss_factory_parm_value[DISP_FAC_Ct6]>>8);            //环温校准H-放大10
+                guc_com_tx_buffer[8] |= (uint8_t)gss_factory_parm_value[DISP_FAC_Ct6];                 //L
+                guc_com_tx_buffer[9] |= (uint8_t)(gss_factory_parm_value[DISP_FAC_Ct7]>>8)；            //湿度校准
+                guc_com_tx_buffer[10]|= (uint8_t)gss_factory_parm_value[DISP_FAC_Ct7];                 //L
                 guc_com_tx_buffer[11]|= (uint8_t)(gss_user_manage_parm_value[DISP_USER_MANAGE_S2]>>8); //最大杀菌时间
                 guc_com_tx_buffer[12]|= (uint8_t)gss_user_manage_parm_value[DISP_USER_MANAGE_S2];      //L
                 guc_com_tx_buffer[13] = (uint8_t)gss_user_manage_parm_value[DISP_USER_MANAGE_S1];      //杀菌模式
-                guc_com_tx_buffer[14] = 0x00;    //预留
-                guc_com_tx_buffer[15] = 0x00;
-                guc_com_tx_buffer[16] = 0x00;
+                if(bflg_expand_unlock == 1)     //开锁
+                {
+                    guc_com_tx_buffer[14] = 0x01;     
+                }
+                else
+                {
+                    guc_com_tx_buffer[14] = 0x00;    
+                }
+                if(DOOR1_IN_PIN == 1)   //开门
+                {
+                    guc_com_tx_buffer[15] = 0x01; 
+                }
+                else
+                {
+                    guc_com_tx_buffer[15] = 0x00; 
+                }
+                guc_com_tx_buffer[16] = 0x00; //预留
                 guc_com_tx_buffer[17] = 0x00;
                 guc_com_tx_buffer[18] = 0x00;
                 guc_com_tx_buffer[19] = 0x00;
