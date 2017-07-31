@@ -1662,7 +1662,7 @@
   <Class Guid="611ccd33-b851-4726-9e3f-a4209353c34d">
     <Instance Guid="00000000-0000-0000-0000-000000000000">
       <PanelCount>6</PanelCount>
-      <InstanceGuid0>1cf075ca-0579-41fe-b52e-ef3c9109c265</InstanceGuid0>
+      <InstanceGuid0>577f7edf-e897-46f7-914f-ad4cc98c52af</InstanceGuid0>
       <HelperClassGuid0>e9e5eb74-fd3b-4a6d-9bee-88bf153cb9b0</HelperClassGuid0>
       <Document.Path0>F:\Work Projects\Blood Cabinet\Software main_control + Display\Main_control\Programl\medical_ref - lowtemp - freq\h_key_disp.c</Document.Path0>
       <ProjectItem.InstanceGuid0>7bab273e-da7d-4c7b-8ada-740bb1d09128</ProjectItem.InstanceGuid0>
@@ -1677,7 +1677,7 @@ RecentEncodings:
 ColumnStates:Header=False,LineEditor=True,SelectionEditor=False,Out of Date Module Indicator=False,Coverage=False,Address=False,Event=False,MainDebug=True,Main=True,OpCode=True,Label=True,
 Bookmarks:
 </StatusText0>
-      <InstanceGuid1>eb0d7f41-275c-46f0-b0a2-e6e2e8415acd</InstanceGuid1>
+      <InstanceGuid1>c3700c17-57f0-4022-8eb2-f1de39dfe165</InstanceGuid1>
       <HelperClassGuid1>e9e5eb74-fd3b-4a6d-9bee-88bf153cb9b0</HelperClassGuid1>
       <Document.Path1>F:\Work Projects\Blood Cabinet\Software main_control + Display\Main_control\Programl\medical_ref - lowtemp - freq\r_main.c</Document.Path1>
       <ProjectItem.InstanceGuid1>c8deb495-2a12-4936-aa8a-3eaeb277b3ba</ProjectItem.InstanceGuid1>
@@ -1692,7 +1692,7 @@ RecentEncodings:
 ColumnStates:Header=False,LineEditor=True,SelectionEditor=False,Out of Date Module Indicator=False,Coverage=False,Address=False,Event=False,MainDebug=True,Main=True,OpCode=True,Label=True,
 Bookmarks:
 </StatusText1>
-      <InstanceGuid2>026b4482-e7f3-4855-9c34-b419d8fb6488</InstanceGuid2>
+      <InstanceGuid2>c0d2626f-4969-4db7-a642-96db3a9fcd23</InstanceGuid2>
       <HelperClassGuid2>e9e5eb74-fd3b-4a6d-9bee-88bf153cb9b0</HelperClassGuid2>
       <Document.Path2>F:\Work Projects\Blood Cabinet\Software main_control + Display\Main_control\Programl\medical_ref - lowtemp - freq\r_cg_timer_user.c</Document.Path2>
       <ProjectItem.InstanceGuid2>b90aad74-fd25-4514-a93e-e6d4ad76b9f9</ProjectItem.InstanceGuid2>
@@ -1707,7 +1707,7 @@ RecentEncodings:
 ColumnStates:Header=False,LineEditor=True,SelectionEditor=False,Out of Date Module Indicator=False,Coverage=False,Address=False,Event=False,MainDebug=True,Main=True,OpCode=True,Label=True,
 Bookmarks:
 </StatusText2>
-      <InstanceGuid3>c89e12a6-2287-462d-8609-cee607790079</InstanceGuid3>
+      <InstanceGuid3>2c68af60-b946-4331-9a15-c2e37aca50b7</InstanceGuid3>
       <HelperClassGuid3>e9e5eb74-fd3b-4a6d-9bee-88bf153cb9b0</HelperClassGuid3>
       <Document.Path3>F:\Work Projects\Blood Cabinet\Software main_control + Display\Main_control\Programl\medical_ref - lowtemp - freq\h_main.c</Document.Path3>
       <ProjectItem.InstanceGuid3>4f05106e-3fc4-488a-a142-a9e63dae3701</ProjectItem.InstanceGuid3>
@@ -1722,7 +1722,7 @@ RecentEncodings:
 ColumnStates:Header=False,LineEditor=True,SelectionEditor=False,Out of Date Module Indicator=False,Coverage=False,Address=False,Event=False,MainDebug=True,Main=True,OpCode=True,Label=True,
 Bookmarks:
 </StatusText3>
-      <InstanceGuid4>cbf4a9a1-59bf-48c8-98b8-83ae6d58118d</InstanceGuid4>
+      <InstanceGuid4>06346ef6-fc7f-45a2-93dc-d4fd37250ee7</InstanceGuid4>
       <HelperClassGuid4>e9e5eb74-fd3b-4a6d-9bee-88bf153cb9b0</HelperClassGuid4>
       <Document.Path4>F:\Work Projects\Blood Cabinet\Software main_control + Display\Main_control\Programl\medical_ref - lowtemp - freq\h_com.c</Document.Path4>
       <ProjectItem.InstanceGuid4>28ae0446-111e-47f6-be54-15be245d4234</ProjectItem.InstanceGuid4>
@@ -1737,7 +1737,7 @@ RecentEncodings:
 ColumnStates:Header=False,LineEditor=True,SelectionEditor=False,Out of Date Module Indicator=False,Coverage=False,Address=False,Event=False,MainDebug=True,Main=True,OpCode=True,Label=True,
 Bookmarks:
 </StatusText4>
-      <InstanceGuid5>10552fe2-4a1a-47cc-b6c8-94a9709b8f52</InstanceGuid5>
+      <InstanceGuid5>e9af35f2-b167-4cd9-a27c-45097d14e8a5</InstanceGuid5>
       <HelperClassGuid5>e9e5eb74-fd3b-4a6d-9bee-88bf153cb9b0</HelperClassGuid5>
       <Document.Path5>F:\Work Projects\Blood Cabinet\Software main_control + Display\Main_control\Programl\medical_ref - lowtemp - freq\h_adg.c</Document.Path5>
       <ProjectItem.InstanceGuid5>06377984-91d8-4a29-89d4-a8d569773a76</ProjectItem.InstanceGuid5>
@@ -1762,7 +1762,7 @@ Bookmarks:
 43554d21-8a25-4093-ae52-29defd4a3017
 0b7f7d55-2f46-4980-ac05-23bcc1b2883d
 </ExtendedItems>
-      <TopItem>4db49aa2-4980-4b67-a8c0-54502ae57db4</TopItem>
+      <TopItem>8c63ce09-d068-417a-b050-f951ec64f91d</TopItem>
       <ViewMode>2</ViewMode>
       <ViewModeToggle>False</ViewModeToggle>
     </Instance>

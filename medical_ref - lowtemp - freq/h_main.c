@@ -141,10 +141,22 @@ const int16_t gss_buzzer_register[10] =
 //------------------------------------------------------------------------------
 void system_init(void)   //系统初始化程序
 {
+    int16_t    gss_E2_writed_flag;
+
     bflg_self_test = 1;       //初始上电时系统自检标志
     
     switch_init();            //拨码开关初始化
     //----------------------------------
+    gss_E2_writed_flag = eeprom_read(255);
+    if(gss_E2_writed_flag != 0xcc)   //变频aa.双系统bb.血液cc
+    {        
+        init_ram_para2();       
+        init_ram_para();
+        
+        eeprom_write(255,0xcc);
+    }
+    
+    //---------------------------------- 
     //init_ram_para2();         // peak 烧写E2，新板子要先写一次；
     //init_ram_para();
     
