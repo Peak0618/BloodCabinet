@@ -264,7 +264,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_THW = 0;
                     guc_com_tx_buffer[20] |= 0x80;   
 
-                    guc_com_tx_buffer[33] = 0x02;                      
+                    guc_com_tx_buffer[33] = 0x06;                      
                     gss_tmp.sword = gss_THW*10;
                     guc_com_tx_buffer[34] = gss_tmp.ubyte.low;         
                     guc_com_tx_buffer[35] = gss_tmp.ubyte.high;   
@@ -277,7 +277,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_ALHS = 0;
                     guc_com_tx_buffer[20] |= 0x80;   
 
-                    guc_com_tx_buffer[33] = 0x03;                      
+                    guc_com_tx_buffer[33] = 0x10;                      
                     gss_tmp.sword = gss_user_set_parm_value[DISP_USER_SET_ALH]*10;
                     guc_com_tx_buffer[34] = gss_tmp.ubyte.low;         
                     guc_com_tx_buffer[35] = gss_tmp.ubyte.high; 
@@ -291,7 +291,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_ALLS = 0;
                     guc_com_tx_buffer[20] |= 0x80;   
 
-                    guc_com_tx_buffer[33] = 0x04;                      
+                    guc_com_tx_buffer[33] = 0x11;                      
                     gss_tmp.sword = gss_user_set_parm_value[DISP_USER_SET_ALL]*10;
                     guc_com_tx_buffer[34] = gss_tmp.ubyte.low;         
                     guc_com_tx_buffer[35] = gss_tmp.ubyte.high; 
@@ -305,7 +305,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_TS = 0;
                     guc_com_tx_buffer[20] |= 0x80;   
 
-                    guc_com_tx_buffer[33] = 0x05;                      
+                    guc_com_tx_buffer[33] = 0x14;                      
                     gss_tmp.sword = gss_user_set_parm_value[DISP_USER_SET_TS]*10;
                     guc_com_tx_buffer[34] = gss_tmp.ubyte.low;         
                     guc_com_tx_buffer[35] = gss_tmp.ubyte.high; 
@@ -319,7 +319,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_DOR = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
 
-                    guc_com_tx_buffer[33] = 0x06;    
+                    guc_com_tx_buffer[33] = 0x20;    
                     gss_tmp.sword = gss_TA*10;
                     guc_com_tx_buffer[34] = gss_tmp.ubyte.low;         
                     guc_com_tx_buffer[35] = gss_tmp.ubyte.high;  
@@ -339,7 +339,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_POW = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
 
-                    guc_com_tx_buffer[33] = 0x07;    
+                    guc_com_tx_buffer[33] = 0x24;    
                     guc_com_tx_buffer[34] = 0x00;    
                     guc_com_tx_buffer[35] = 0x00;    
                     guc_com_tx_buffer[36] = 0x00;    
@@ -358,7 +358,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_BAT = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
 
-                    guc_com_tx_buffer[33] = 0x08;    
+                    guc_com_tx_buffer[33] = 0x25;    
                     gss_tmp.sword = guc_bat_Vout*10;
                     guc_com_tx_buffer[34] = gss_tmp.ubyte.low;         
                     guc_com_tx_buffer[35] = gss_tmp.ubyte.high;  
@@ -382,7 +382,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_FAT_TA = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
 
-                    guc_com_tx_buffer[33] = 0x09;  
+                    guc_com_tx_buffer[33] = 0x28;  
                     guc_com_tx_buffer[34] = 0x10;   
                     guc_com_tx_buffer[35] = 0x00;    
                     guc_com_tx_buffer[36] = 0x00;   
@@ -394,7 +394,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_FAT_TE = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
                 
-                    guc_com_tx_buffer[33] = 0x09;  
+                    guc_com_tx_buffer[33] = 0x28;  
                     guc_com_tx_buffer[34] = 0x11;   
                     guc_com_tx_buffer[35] = 0x00;    
                     guc_com_tx_buffer[36] = 0x00;   
@@ -406,7 +406,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_FAT_THW = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
 
-                    guc_com_tx_buffer[33] = 0x09;  
+                    guc_com_tx_buffer[33] = 0x28;  
                     guc_com_tx_buffer[34] = 0x12;   
                     guc_com_tx_buffer[35] = 0x00;    
                     guc_com_tx_buffer[36] = 0x00;   
@@ -418,7 +418,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_FAT_TC = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
                 
-                    guc_com_tx_buffer[33] = 0x09;  
+                    guc_com_tx_buffer[33] = 0x28;  
                     guc_com_tx_buffer[34] = 0x13;   
                     guc_com_tx_buffer[35] = 0x00;    
                     guc_com_tx_buffer[36] = 0x00;   
@@ -430,7 +430,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_FAT_TU = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
                 
-                    guc_com_tx_buffer[33] = 0x09;  
+                    guc_com_tx_buffer[33] = 0x28;  
                     guc_com_tx_buffer[34] = 0x14;   
                     guc_com_tx_buffer[35] = 0x00;    
                     guc_com_tx_buffer[36] = 0x00;   
@@ -442,7 +442,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_FAT_TD = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
                 
-                    guc_com_tx_buffer[33] = 0x09;  
+                    guc_com_tx_buffer[33] = 0x28;  
                     guc_com_tx_buffer[34] = 0x15;   
                     guc_com_tx_buffer[35] = 0x00;    
                     guc_com_tx_buffer[36] = 0x00;   
@@ -454,7 +454,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_IC = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
                     
-                    guc_com_tx_buffer[33] = 0x0A; 
+                    guc_com_tx_buffer[33] = 0x2b; 
                     gss_tmp.sword = (guc_flash_add>>2);   //guc_flash_add>>2 = 除以4，将地址转换为张数
                     //guc_com_tx_buffer[34] = (uint8_t)(guc_flash_add>>2);       //guc_flash_add>>2 = 除以4，将地址转换为张数
                     //guc_com_tx_buffer[35] = (uint8_t)((guc_flash_add>>2)>>8);  
@@ -469,7 +469,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_TC = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
 
-                    guc_com_tx_buffer[33] = 0x0B;    
+                    guc_com_tx_buffer[33] = 0x32;    
                     gss_tmp.sword = (gss_TC * 10);   
                     guc_com_tx_buffer[34] = gss_tmp.ubyte.low;         
                     guc_com_tx_buffer[35] = gss_tmp.ubyte.high;  
@@ -483,7 +483,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_POW_OFF = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
                 
-                    guc_com_tx_buffer[33] = 0x0C;    
+                    guc_com_tx_buffer[33] = 0x33;    
                     gss_tmp.sword = (gss_TA * 10);   
                     guc_com_tx_buffer[34] = gss_tmp.ubyte.low;         
                     guc_com_tx_buffer[35] = gss_tmp.ubyte.high;    
@@ -496,7 +496,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_DOOR_OPEN = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
                 
-                    guc_com_tx_buffer[33] = 0x0D;    
+                    guc_com_tx_buffer[33] = 0x34;    
                     gss_tmp.sword = (gss_TA * 10);   
                     guc_com_tx_buffer[34] = gss_tmp.ubyte.low;         
                     guc_com_tx_buffer[35] = gss_tmp.ubyte.high;   
@@ -509,7 +509,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_AIR_H = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
                 
-                    guc_com_tx_buffer[33] = 0x0E;    
+                    guc_com_tx_buffer[33] = 0x04;    
                     gss_tmp.sword = (gss_TA * 10);   
                     guc_com_tx_buffer[34] = gss_tmp.ubyte.low;         
                     guc_com_tx_buffer[35] = gss_tmp.ubyte.high;   
@@ -522,7 +522,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_AIR_L = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
                 
-                    guc_com_tx_buffer[33] = 0x0F;    
+                    guc_com_tx_buffer[33] = 0x05;    
                     gss_tmp.sword = (gss_TA * 10);   
                     guc_com_tx_buffer[34] = gss_tmp.ubyte.low;         
                     guc_com_tx_buffer[35] = gss_tmp.ubyte.high;   
@@ -535,7 +535,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_TE_H = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
                 
-                    guc_com_tx_buffer[33] = 0x10;    
+                    guc_com_tx_buffer[33] = 0x35;    
                     gss_tmp.sword = (gss_TE * 10);   
                     guc_com_tx_buffer[34] = gss_tmp.ubyte.low;         
                     guc_com_tx_buffer[35] = gss_tmp.ubyte.high;   
@@ -548,7 +548,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                     bflg_sent_usb_ozone_FAT = 0;
                     guc_com_tx_buffer[20] |= 0x80; 
 
-                    guc_com_tx_buffer[33] = 0x11;    
+                    guc_com_tx_buffer[33] = 0x36;    
                     guc_com_tx_buffer[34] = 0x00;         
                     guc_com_tx_buffer[35] = 0x00;   
                     guc_com_tx_buffer[36] = 0x00;    
