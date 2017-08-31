@@ -2194,16 +2194,30 @@ void operation_parm_read(void)
 *********************************************************************************************************************/
 void IC_unlock_deal(void)
 {
-    if(guc_disp_mode != DISP_IC_REGISTER)   //在IC卡注册状态时不进行开锁的动作
+    if (bflg_com_type == 0)   //如果是LED显示屏通讯
     {
-        if(guc_IC_access_state == 1)
+        if(guc_disp_mode != DISP_IC_REGISTER)   //在IC卡注册状态时不进行开锁的动作
         {
-            //LOCK_OUT_PIN = 1;          //锁打开--血液的锁放到扩展板上
+            if(guc_IC_access_state == 1)
+            {
+                //LOCK_OUT_PIN = 1;          //锁打开--血液的锁放到扩展板上
+                bflg_expand_unlock = 1;
+                guc_IC_access_state = 0;
+        
+                bflg_lock_delaytimer = 1;  //开锁的延时标志
+                guc_lock_delaytimer = 0;
+            }
+        }
+    }
+    else
+    {
+        if(gss_liquid_fingerprint_unlocked == 1)
+        {
             bflg_expand_unlock = 1;
-            guc_IC_access_state = 0;
-
-            bflg_lock_delaytimer = 1;  //开锁的延时标志
-            guc_lock_delaytimer = 0;
+        }
+        else
+        {
+            bflg_expand_unlock = 0;
         }
     }
 }

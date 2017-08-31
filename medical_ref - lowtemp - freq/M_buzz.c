@@ -39,16 +39,16 @@ uint8_t   guc_buzz_sound_cnt_delaytime;
 /****************************************************************************************************************************************
 函数功能: 滴滴响
  
-函数位置: buzz_sound_priority()即主循环-------------------------ok
+函数位置: buzz_sound_priority()-------------------------ok
 ****************************************************************************************************************************************/
 void buzz_loop_tick(void)
 {
-    if (bflg_buzz_loop_tick_output == 1)
+    if (bflg_buzz_loop_tick_output == 1)           //0.5s更新
     {    
         if(bflg_buzz_loop_tick_runing == 0)
         {
             bflg_buzz_loop_tick_runing = 1;
-            R_TAU0_Channel3_Start();                //响的条件: 1、有报警 2、未按下"蜂鸣取消"键 
+            R_TAU0_Channel3_Start();            //响的条件: 1、有报警 2、未按下"蜂鸣取消"键 
         }
     }
     else
@@ -68,7 +68,7 @@ void buzz_loop_tick_delaytime(void)
     if (bflg_buzz_loop_tick_set == 1)    
     {
         gss_buzz_loop_tick_delaytime++;
-        if (gss_buzz_loop_tick_delaytime > 10)     //设定时间 10ms * 10 = 100 ms
+        if (gss_buzz_loop_tick_delaytime > 50)     //设定时间 10ms * 50 = 0.5s 
         {
             bflg_buzz_loop_tick_output = ~bflg_buzz_loop_tick_output;
             gss_buzz_loop_tick_delaytime = 0;
@@ -119,7 +119,7 @@ void buzz_one_tick_delaytime(void)
     if (bflg_buzz_one_tick_set == 1)	  
     {
         gss_buzz_one_tick_delaytime++;
-        if (gss_buzz_one_tick_delaytime >= 2)   // 100 * 2 = 200ms
+        if (gss_buzz_one_tick_delaytime >= 5)   // 100 * 5 = 0.5s
         {
             bflg_buzz_one_tick_stop = 1;
             bflg_buzz_one_tick_set = 0;
@@ -157,7 +157,7 @@ void buzz_always_sound(void)
 功能描述:蜂鸣器长响、滴滴、响一声的优先级顺序 
          在长响时，不能再有关闭蜂鸣器的行为，即不能再有滴滴声，否则声音会卡；
 
-函数位置: 主循环--------------------------------ok
+函数位置: 1ms--------------------------------ok
 ***********************************************************************************************************************************/
 void buzz_sound_priority(void)
 {
@@ -184,12 +184,12 @@ void buzz_sound_priority(void)
 
 函数位置: 100ms定时器中----------ok
 *************************************************************************************************************************************/
- void buzz_sound_cnt(void)
+void buzz_sound_cnt(void)
 {    
     if(guc_buzz_sound_cnt > 0)
     {
         guc_buzz_sound_cnt_delaytime++;
-        if(guc_buzz_sound_cnt_delaytime >= 10)  //1s
+        if(guc_buzz_sound_cnt_delaytime >= 10)  //100ms * 10 = 1s
         {
             guc_buzz_sound_cnt--;
             guc_buzz_sound_cnt_delaytime = 0;

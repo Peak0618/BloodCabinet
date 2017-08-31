@@ -137,6 +137,7 @@ extern uint8_t  guc_com_bus_add;
 extern uint8_t  gss_usb_delaytime;             //初次上电延时xs后在发送usb事件
 extern uint8_t  guc_U_disk_state;              //显示板发送过来的U盘状态
 extern uint8_t  guc_usb_state;                 //显示板发送过来的usb板的状态
+extern int16_t  gss_liquid_fingerprint_unlocked;    //液晶屏的指纹开锁
 
 //------------------------------------------------------------------------------
 #endif

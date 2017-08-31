@@ -91,7 +91,8 @@ uint16_t  guc_expand_bus_delaytime;   //拓展板占据总线延时
 
 int16_t gss_liquid_led_button;              //液晶屏的开灯按钮  ：1开 0关
 int16_t gss_liquid_ozone_disinfect_button;  //液晶屏的启动杀菌按钮：1开 0关
-
+int16_t gss_liquid_fingerprint_unlocked;    //液晶屏的指纹开锁
+                                            
 uint8_t guc_led_comm_cnt;                   //和led板通讯x次才转换到扩展板，因为led要求实时
 uint8_t gss_usb_delaytime;                  //初次上电延时xs后在发送usb事件
 uint8_t guc_U_disk_state;                   //显示板发送过来的U盘状态
@@ -219,7 +220,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                 gss_tmp.sword = gss_TD*10;                                        //下显示温度
                 guc_com_tx_buffer[25] = gss_tmp.ubyte.low;
                 guc_com_tx_buffer[26] = gss_tmp.ubyte.high;
-                gss_tmp.sword = gss_TA*10;                                        //箱内温度
+                gss_tmp.sword = ((gss_TU + gss_TD)>>1)*10;                        //箱内温度-上下温平均值
                 guc_com_tx_buffer[27] = gss_tmp.ubyte.low;
                 guc_com_tx_buffer[28] = gss_tmp.ubyte.high;
                 gss_tmp.sword = gss_TE*10;                                        //除霜(热交换)温度
@@ -680,7 +681,7 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                 guc_com_tx_buffer[11]|= (uint8_t)(gss_user_manage_parm_value[DISP_USER_MANAGE_S2]>>8); //最大杀菌时间
                 guc_com_tx_buffer[12]|= (uint8_t)gss_user_manage_parm_value[DISP_USER_MANAGE_S2];      //L
                 guc_com_tx_buffer[13] = (uint8_t)gss_user_manage_parm_value[DISP_USER_MANAGE_S1];      //杀菌模式
-                if(bflg_expand_unlock == 1)     //开锁
+                if(bflg_expand_unlock == 1)     //开锁--当开锁时开门要一直开锁，看看放到哪里？？
                 {
                     guc_com_tx_buffer[14] = 0x01;     
                 }
@@ -1049,8 +1050,23 @@ void com_tx_init(void)   //通讯发送初始化程序，在主循环程序中调用
                 guc_com_tx_buffer[11]|= (uint8_t)(gss_user_manage_parm_value[DISP_USER_MANAGE_S2]>>8); //最大杀菌时间--移液晶处理
                 guc_com_tx_buffer[12]|= (uint8_t)gss_user_manage_parm_value[DISP_USER_MANAGE_S2];      //L
                 guc_com_tx_buffer[13] = (uint8_t)gss_user_manage_parm_value[DISP_USER_MANAGE_S1];      //杀菌模式
-                guc_com_tx_buffer[14] = 0x00;    //预留
-                guc_com_tx_buffer[15] = 0x00;
+                if(bflg_expand_unlock == 1)     //开锁
+                {
+                    guc_com_tx_buffer[14] = 0x01;     
+                }
+                else
+                {
+                    guc_com_tx_buffer[14] = 0x00;    
+                }
+                if(DOOR1_IN_PIN == 1)   //开门
+                {
+                    guc_com_tx_buffer[15] = 0x01; 
+                }
+                else
+                {
+                    guc_com_tx_buffer[15] = 0x00; 
+                }
+
                 guc_com_tx_buffer[16] = 0x00;
                 guc_com_tx_buffer[17] = 0x00;
                 guc_com_tx_buffer[18] = 0x00;
@@ -1300,7 +1316,7 @@ void com_rx_data_deal(void)   //通讯接收数据处理程序，在主循环程序中调用
                         bflg_bus_rx_busying = 0;
                         
                         bflg_com_tx_delaytime = 1;         //置发送延时标志
-                        gss_com_tx_delaytimer = 15;        //发送延时计时器赋值
+                        gss_com_tx_delaytimer = 40;        //发送延时计时器赋值
                         
                         bflg_com_fault = 0;                //清通讯故障标志
                         gss_com_fault_delaytimer = 0;      //清通讯故障计时器
@@ -1379,7 +1395,11 @@ void com_rx_data_deal(void)   //通讯接收数据处理程序，在主循环程序中调用
                         //--------------------------------------
                         gss_tmp.ubyte.low = guc_com_rx_buffer[35];
                         gss_tmp.ubyte.high = guc_com_rx_buffer[36];
-                        ram_para[num_comp2_backup_TS] = gss_tmp.sword;         //秒--待                   
+                        ram_para[num_comp2_backup_TS] = gss_tmp.sword;         //秒--待  
+                        //--------------------------------------
+                        gss_tmp.ubyte.low = guc_com_rx_buffer[37];
+                        gss_tmp.ubyte.high = guc_com_rx_buffer[38];
+                        gss_liquid_fingerprint_unlocked = gss_tmp.sword;       //指纹开锁 
                     }
                 }
                 else    //如果是读管理员信息
@@ -1392,7 +1412,7 @@ void com_rx_data_deal(void)   //通讯接收数据处理程序，在主循环程序中调用
                         bflg_bus_rx_busying = 0;
                         
                         bflg_com_tx_delaytime = 1;         //置发送延时标志
-                        gss_com_tx_delaytimer = 15;        //发送延时计时器赋值
+                        gss_com_tx_delaytimer = 40;        //发送延时计时器赋值
                         
                         bflg_com_fault = 0;                //清通讯故障标志
                         gss_com_fault_delaytimer = 0;      //清通讯故障计时器
@@ -1495,6 +1515,27 @@ void com_rx_data_deal(void)   //通讯接收数据处理程序，在主循环程序中调用
                         gss_tmp.ubyte.low = guc_com_rx_buffer[47];
                         gss_tmp.ubyte.high = guc_com_rx_buffer[48];
                         gss_factory_parm_value[DISP_FAC_PCH] = gss_tmp.sword;    //血液柜/药品柜程序切换ok                 
+                        //--------------------------------------
+                        gss_tmp.ubyte.low = guc_com_rx_buffer[49];
+                        gss_tmp.ubyte.high = guc_com_rx_buffer[50];
+                        gss_factory_parm_value[DISP_FAC_b0F] = gss_tmp.sword;    //变频压机转速控制温差
+                        //--------------------------------------
+                        gss_tmp.ubyte.low = guc_com_rx_buffer[51];
+                        gss_tmp.ubyte.high = guc_com_rx_buffer[52];
+                        gss_factory_parm_value[DISP_FAC_br1] = gss_tmp.sword;    //变频压机转速变量1
+                        //--------------------------------------
+                        gss_tmp.ubyte.low = guc_com_rx_buffer[53];
+                        gss_tmp.ubyte.high = guc_com_rx_buffer[54];
+                        gss_factory_parm_value[DISP_FAC_br2] = gss_tmp.sword;    //变频压机转速变量2
+                        //--------------------------------------           
+                        gss_tmp.ubyte.low = guc_com_rx_buffer[55];
+                        gss_tmp.ubyte.high = guc_com_rx_buffer[56];
+                        gss_factory_parm_value[DISP_FAC_br3] = gss_tmp.sword;    //变频压机转速变量3
+                        //--------------------------------------        
+                        gss_tmp.ubyte.low = guc_com_rx_buffer[57];
+                        gss_tmp.ubyte.high = guc_com_rx_buffer[58];
+                        gss_factory_parm_value[DISP_FAC_br4] = gss_tmp.sword;    //变频压机转速变量4
+                        //--------------------------------------                        
                     }
                 }
             }
@@ -1508,7 +1549,7 @@ void com_rx_data_deal(void)   //通讯接收数据处理程序，在主循环程序中调用
                     bflg_bus_rx_busying = 0;
                     
                     bflg_com_tx_delaytime = 1;        //置发送延时标志
-                    gss_com_tx_delaytimer = 15;       //发送延时计时器赋值
+                    gss_com_tx_delaytimer = 40;       //发送延时计时器赋值
                     
                     bflg_com_fault = 0;               //清通讯故障标志
                     gss_com_fault_delaytimer = 0;     //清通讯故障计时器

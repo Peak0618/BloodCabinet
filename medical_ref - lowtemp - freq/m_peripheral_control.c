@@ -27,6 +27,7 @@ void door_heat_RL_out(void);
 void inside_fan_control(void);
 void fan_RL_out(void);
 void led_control(void);
+void liquid_led_control(void);
 void led_on_delaytime(void);
 void led_RL_out(void);
 void remote_alarm_lamp(void);
@@ -321,69 +322,38 @@ void led_control(void)
             }
         }
     }
-    else                   //液晶屏
+    /*else                   //液晶屏
     {
-        if(bflg_led_on == 1)                        //灯亮
+        if(gss_liquid_led_button == 1) 
         {
-            if(gss_liquid_led_button == 1)    
-            {
-                bflg_led_on = 0;                  //关灯
-                
-                bflg_led_on_delaytime = 0;       //清开灯延时标志
-                guc_led_on_delaytime = 0;
-                bflg_key_open_led = 0;           //清按键开的灯标志
-                bflg_key_close_led = 1;          //按键关灯
-            }
-            else
-            {
-                if(DOOR_IN_PIN == DOOR_CLOSE)
-                {
-                    if(gss_user_manage_parm_value[DISP_USER_MANAGE_Lt] == -1)   //关闭延时关灯功能
-                    {
-                        if(bflg_key_open_led == 0)  //不是按键开的灯
-                        {
-                            bflg_led_on = 0;
-                        }
-                    }
-                    else
-                    {
-                        if(bflg_led_on_delaytime == 0)
-                        {
-                            bflg_led_on = 0;
-                            bflg_key_open_led= 0;
-                        }
-                    }
-                }
-            }
+            bflg_led_on = 1;                  //开灯
         }
         else
         {
-            if(gss_liquid_led_button == 1)
-            {
-                bflg_led_on = 1;            //开灯
-                
-                bflg_led_on_delaytime = 1;  //开灯延时标志
-                guc_led_on_delaytime = 0;
-                bflg_key_open_led = 1;      //按键开的灯标志
-                bflg_key_close_led = 0;     //清按键关灯标志
-            }
-            else
-            {
-                if(DOOR_IN_PIN == DOOR_OPEN)
-                {
-                    if(bflg_key_close_led != 1)
-                    {
-                        bflg_led_on = 1;
-                    }
-                }
-                else
-                {
-                    bflg_key_close_led = 0;
-                }
-            }
+            bflg_led_on = 0;                  //关灯
+        }
+    } */
+}
+/**********************************************************************************************************************************************
+函数功能: 液晶屏控制开灯，若在LED中，因LED按键需要延时检测，会造成液晶屏开灯时有延时
+
+函数位置:     主循环---------------------------------------------no
+***********************************************************************************************************************************************/
+void liquid_led_control(void)
+{
+    if(bflg_com_type == 1) //液晶屏
+    {
+        if(gss_liquid_led_button == 1) 
+        {
+            bflg_led_on = 1;                  //开灯
+        }
+        else
+        {
+            bflg_led_on = 0;                  //关灯
         }
     } 
 }
+
 /**********************************************************************************************************************************************
 函数功能: LED按键开灯延时
 

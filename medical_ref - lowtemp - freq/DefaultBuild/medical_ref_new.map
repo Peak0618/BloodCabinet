@@ -1,7 +1,7 @@
 
 
 
-78K0R Linker W1.70                            Date: 1 Aug 2017 Page:   1
+78K0R Linker W1.70                            Date:31 Aug 2017 Page:   1
 
 Command:   -yD:\Program Files (x86)\Renesas Electronics\CubeSuite+\Devic
            e\RL78\Devicefile -_msgoff -oDefaultBuild\medical_ref_new.lmf
@@ -34,8 +34,8 @@ Directive:
 *** Link information ***
 
     64 output segment(s)
- AA0AH byte(s) real data
- 10761 symbol(s) defined
+ AA25H byte(s) real data
+ 10756 symbol(s) defined
 
 
 *** Memory map ***
@@ -547,7 +547,7 @@ Directive:
                                       04C5CH    00000H
                   @@CNST   m_test     04C5CH    00000H
                   @@CNST   M_RTC      04C5CH    00028H
-         @@CODEL                      04C84H    087B0H  CSEG
+         @@CODEL                      04C84H    087CBH  CSEG
                   @@CODEL  r_main     04C84H    00031H
                   @@CODEL  r_systeminit
                                       04CB5H    0003EH
@@ -580,30 +580,30 @@ Directive:
                   @@CODEL  h_adg      05FB5H    00AD6H
                   @@CODEL  h_bat_ctrl
                                       06A8BH    003EFH
-                  @@CODEL  h_com      06E7AH    019E9H
+                  @@CODEL  h_com      06E7AH    01A50H
                   @@CODEL  h_key_disp
-                                      08863H    012E3H
-                  @@CODEL  h_main     09B46H    0080EH
+                                      088CAH    012E9H
+                  @@CODEL  h_main     09BB3H    00812H
                   @@CODEL  h_protect
-                                      0A354H    008B0H
+                                      0A3C5H    008A5H
                   @@CODEL  h_rom_para2
-                                      0AC04H    00000H
-                  @@CODEL  M_buzz     0AC04H    000E8H
+                                      0AC6AH    00000H
+                  @@CODEL  M_buzz     0AC6AH    000E8H
                   @@CODEL  m_compressor
-                                      0ACECH    00388H
+                                      0AD52H    00388H
                   @@CODEL  m_peripheral_control
-                                      0B074H    002CCH
+                                      0B0DAH    00269H
                   @@CODEL  m_key_operation
-                                      0B340H    019D4H
-                  @@CODEL  m_test     0CD14H    00234H
-                  @@CODEL  M_RTC      0CF48H    004ECH
-* gap *                               0D434H    02BCCH
+                                      0B343H    019ECH
+                  @@CODEL  m_test     0CD2FH    00234H
+                  @@CODEL  M_RTC      0CF63H    004ECH
+* gap *                               0D44FH    02BB1H
 
   MEMORY=RAM
   BASE ADDRESS=FCF00H   SIZE=03100H
          OUTPUT   INPUT    INPUT      BASE      SIZE
          SEGMENT  SEGMENT  MODULE     ADDRESS
-         @@DATA                       FCF00H    00672H  DSEG BASEP
+         @@DATA                       FCF00H    00674H  DSEG BASEP
                   @@DATA   @cstart    FCF00H    000BAH
                   @@DATA   r_main     FCFBAH    00000H
                   @@DATA   r_systeminit
@@ -637,336 +637,336 @@ Directive:
                   @@DATA   h_adg      FD0A6H    00066H
                   @@DATA   h_bat_ctrl
                                       FD10CH    0000EH
-                  @@DATA   h_com      FD11AH    000F6H
+                  @@DATA   h_com      FD11AH    000F8H
                   @@DATA   h_key_disp
-                                      FD210H    00040H
-                  @@DATA   h_main     FD250H    00012H
+                                      FD212H    00040H
+                  @@DATA   h_main     FD252H    00012H
                   @@DATA   h_protect
-                                      FD262H    00030H
+                                      FD264H    00030H
                   @@DATA   h_rom_para2
-                                      FD292H    001DAH
-                  @@DATA   M_buzz     FD46CH    00008H
+                                      FD294H    001DAH
+                  @@DATA   M_buzz     FD46EH    00008H
                   @@DATA   m_compressor
-                                      FD474H    00050H
+                                      FD476H    00050H
                   @@DATA   m_peripheral_control
-                                      FD4C4H    0000CH
+                                      FD4C6H    0000CH
                   @@DATA   m_key_operation
-                                      FD4D0H    00082H
-                  @@DATA   m_test     FD552H    00008H
-                  @@DATA   M_RTC      FD55AH    00018H
-                  @@DATA   @rom       FD572H    00000H
-         @@INIT                       FD572H    00002H  DSEG BASEP
-                  @@INIT   @cstart    FD572H    00000H
-                  @@INIT   r_main     FD572H    00000H
+                                      FD4D2H    00082H
+                  @@DATA   m_test     FD554H    00008H
+                  @@DATA   M_RTC      FD55CH    00018H
+                  @@DATA   @rom       FD574H    00000H
+         @@INIT                       FD574H    00002H  DSEG BASEP
+                  @@INIT   @cstart    FD574H    00000H
+                  @@INIT   r_main     FD574H    00000H
                   @@INIT   r_systeminit
-                                      FD572H    00000H
-                  @@INIT   r_cg_cgc   FD572H    00000H
+                                      FD574H    00000H
+                  @@INIT   r_cg_cgc   FD574H    00000H
                   @@INIT   r_cg_cgc_user
-                                      FD572H    00000H
+                                      FD574H    00000H
                   @@INIT   r_cg_serial
-                                      FD572H    00000H
+                                      FD574H    00000H
                   @@INIT   r_cg_serial_user
-                                      FD572H    00000H
+                                      FD574H    00000H
                   @@INIT   r_cg_port
-                                      FD572H    00000H
+                                      FD574H    00000H
                   @@INIT   r_cg_port_user
-                                      FD572H    00000H
+                                      FD574H    00000H
                   @@INIT   r_cg_intc
-                                      FD572H    00000H
+                                      FD574H    00000H
                   @@INIT   r_cg_intc_user
-                                      FD572H    00000H
-                  @@INIT   r_cg_adc   FD572H    00000H
+                                      FD574H    00000H
+                  @@INIT   r_cg_adc   FD574H    00000H
                   @@INIT   r_cg_adc_user
-                                      FD572H    00000H
+                                      FD574H    00000H
                   @@INIT   r_cg_timer
-                                      FD572H    00000H
+                                      FD574H    00000H
                   @@INIT   r_cg_timer_user
-                                      FD572H    00000H
-                  @@INIT   r_cg_wdt   FD572H    00000H
+                                      FD574H    00000H
+                  @@INIT   r_cg_wdt   FD574H    00000H
                   @@INIT   r_cg_wdt_user
-                                      FD572H    00000H
-                  @@INIT   h_ad       FD572H    00000H
-                  @@INIT   h_adg      FD572H    00000H
+                                      FD574H    00000H
+                  @@INIT   h_ad       FD574H    00000H
+                  @@INIT   h_adg      FD574H    00000H
                   @@INIT   h_bat_ctrl
-                                      FD572H    00000H
-                  @@INIT   h_com      FD572H    00002H
+                                      FD574H    00000H
+                  @@INIT   h_com      FD574H    00002H
                   @@INIT   h_key_disp
-                                      FD574H    00000H
-                  @@INIT   h_main     FD574H    00000H
+                                      FD576H    00000H
+                  @@INIT   h_main     FD576H    00000H
                   @@INIT   h_protect
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INIT   h_rom_para2
-                                      FD574H    00000H
-                  @@INIT   M_buzz     FD574H    00000H
+                                      FD576H    00000H
+                  @@INIT   M_buzz     FD576H    00000H
                   @@INIT   m_compressor
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INIT   m_peripheral_control
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INIT   m_key_operation
-                                      FD574H    00000H
-                  @@INIT   m_test     FD574H    00000H
-                  @@INIT   M_RTC      FD574H    00000H
-                  @@INIT   @rom       FD574H    00000H
-         @@INIS                       FD574H    00000H  DSEG UNITP
-                  @@INIS   @cstart    FD574H    00000H
-                  @@INIS   r_main     FD574H    00000H
+                                      FD576H    00000H
+                  @@INIT   m_test     FD576H    00000H
+                  @@INIT   M_RTC      FD576H    00000H
+                  @@INIT   @rom       FD576H    00000H
+         @@INIS                       FD576H    00000H  DSEG UNITP
+                  @@INIS   @cstart    FD576H    00000H
+                  @@INIS   r_main     FD576H    00000H
                   @@INIS   r_systeminit
-                                      FD574H    00000H
-                  @@INIS   r_cg_cgc   FD574H    00000H
+                                      FD576H    00000H
+                  @@INIS   r_cg_cgc   FD576H    00000H
                   @@INIS   r_cg_cgc_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INIS   r_cg_serial
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INIS   r_cg_serial_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INIS   r_cg_port
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INIS   r_cg_port_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INIS   r_cg_intc
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INIS   r_cg_intc_user
-                                      FD574H    00000H
-                  @@INIS   r_cg_adc   FD574H    00000H
+                                      FD576H    00000H
+                  @@INIS   r_cg_adc   FD576H    00000H
                   @@INIS   r_cg_adc_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INIS   r_cg_timer
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INIS   r_cg_timer_user
-                                      FD574H    00000H
-                  @@INIS   r_cg_wdt   FD574H    00000H
+                                      FD576H    00000H
+                  @@INIS   r_cg_wdt   FD576H    00000H
                   @@INIS   r_cg_wdt_user
-                                      FD574H    00000H
-                  @@INIS   h_ad       FD574H    00000H
-                  @@INIS   h_adg      FD574H    00000H
+                                      FD576H    00000H
+                  @@INIS   h_ad       FD576H    00000H
+                  @@INIS   h_adg      FD576H    00000H
                   @@INIS   h_bat_ctrl
-                                      FD574H    00000H
-                  @@INIS   h_com      FD574H    00000H
+                                      FD576H    00000H
+                  @@INIS   h_com      FD576H    00000H
                   @@INIS   h_key_disp
-                                      FD574H    00000H
-                  @@INIS   h_main     FD574H    00000H
+                                      FD576H    00000H
+                  @@INIS   h_main     FD576H    00000H
                   @@INIS   h_protect
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INIS   h_rom_para2
-                                      FD574H    00000H
-                  @@INIS   M_buzz     FD574H    00000H
+                                      FD576H    00000H
+                  @@INIS   M_buzz     FD576H    00000H
                   @@INIS   m_compressor
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INIS   m_peripheral_control
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INIS   m_key_operation
-                                      FD574H    00000H
-                  @@INIS   m_test     FD574H    00000H
-                  @@INIS   M_RTC      FD574H    00000H
-                  @@INIS   @rom       FD574H    00000H
-         @@DATS                       FD574H    00000H  DSEG UNITP
-                  @@DATS   @cstart    FD574H    00000H
-                  @@DATS   r_main     FD574H    00000H
+                                      FD576H    00000H
+                  @@INIS   m_test     FD576H    00000H
+                  @@INIS   M_RTC      FD576H    00000H
+                  @@INIS   @rom       FD576H    00000H
+         @@DATS                       FD576H    00000H  DSEG UNITP
+                  @@DATS   @cstart    FD576H    00000H
+                  @@DATS   r_main     FD576H    00000H
                   @@DATS   r_systeminit
-                                      FD574H    00000H
-                  @@DATS   r_cg_cgc   FD574H    00000H
+                                      FD576H    00000H
+                  @@DATS   r_cg_cgc   FD576H    00000H
                   @@DATS   r_cg_cgc_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATS   r_cg_serial
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATS   r_cg_serial_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATS   r_cg_port
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATS   r_cg_port_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATS   r_cg_intc
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATS   r_cg_intc_user
-                                      FD574H    00000H
-                  @@DATS   r_cg_adc   FD574H    00000H
+                                      FD576H    00000H
+                  @@DATS   r_cg_adc   FD576H    00000H
                   @@DATS   r_cg_adc_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATS   r_cg_timer
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATS   r_cg_timer_user
-                                      FD574H    00000H
-                  @@DATS   r_cg_wdt   FD574H    00000H
+                                      FD576H    00000H
+                  @@DATS   r_cg_wdt   FD576H    00000H
                   @@DATS   r_cg_wdt_user
-                                      FD574H    00000H
-                  @@DATS   h_ad       FD574H    00000H
-                  @@DATS   h_adg      FD574H    00000H
+                                      FD576H    00000H
+                  @@DATS   h_ad       FD576H    00000H
+                  @@DATS   h_adg      FD576H    00000H
                   @@DATS   h_bat_ctrl
-                                      FD574H    00000H
-                  @@DATS   h_com      FD574H    00000H
+                                      FD576H    00000H
+                  @@DATS   h_com      FD576H    00000H
                   @@DATS   h_key_disp
-                                      FD574H    00000H
-                  @@DATS   h_main     FD574H    00000H
+                                      FD576H    00000H
+                  @@DATS   h_main     FD576H    00000H
                   @@DATS   h_protect
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATS   h_rom_para2
-                                      FD574H    00000H
-                  @@DATS   M_buzz     FD574H    00000H
+                                      FD576H    00000H
+                  @@DATS   M_buzz     FD576H    00000H
                   @@DATS   m_compressor
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATS   m_peripheral_control
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATS   m_key_operation
-                                      FD574H    00000H
-                  @@DATS   m_test     FD574H    00000H
-                  @@DATS   M_RTC      FD574H    00000H
-                  @@DATS   @rom       FD574H    00000H
-         @@INITL                      FD574H    00000H  DSEG UNIT64KP
-                  @@INITL  @cstart    FD574H    00000H
-                  @@INITL  r_main     FD574H    00000H
+                                      FD576H    00000H
+                  @@DATS   m_test     FD576H    00000H
+                  @@DATS   M_RTC      FD576H    00000H
+                  @@DATS   @rom       FD576H    00000H
+         @@INITL                      FD576H    00000H  DSEG UNIT64KP
+                  @@INITL  @cstart    FD576H    00000H
+                  @@INITL  r_main     FD576H    00000H
                   @@INITL  r_systeminit
-                                      FD574H    00000H
-                  @@INITL  r_cg_cgc   FD574H    00000H
+                                      FD576H    00000H
+                  @@INITL  r_cg_cgc   FD576H    00000H
                   @@INITL  r_cg_cgc_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INITL  r_cg_serial
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INITL  r_cg_serial_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INITL  r_cg_port
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INITL  r_cg_port_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INITL  r_cg_intc
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INITL  r_cg_intc_user
-                                      FD574H    00000H
-                  @@INITL  r_cg_adc   FD574H    00000H
+                                      FD576H    00000H
+                  @@INITL  r_cg_adc   FD576H    00000H
                   @@INITL  r_cg_adc_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INITL  r_cg_timer
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INITL  r_cg_timer_user
-                                      FD574H    00000H
-                  @@INITL  r_cg_wdt   FD574H    00000H
+                                      FD576H    00000H
+                  @@INITL  r_cg_wdt   FD576H    00000H
                   @@INITL  r_cg_wdt_user
-                                      FD574H    00000H
-                  @@INITL  h_ad       FD574H    00000H
-                  @@INITL  h_adg      FD574H    00000H
+                                      FD576H    00000H
+                  @@INITL  h_ad       FD576H    00000H
+                  @@INITL  h_adg      FD576H    00000H
                   @@INITL  h_bat_ctrl
-                                      FD574H    00000H
-                  @@INITL  h_com      FD574H    00000H
+                                      FD576H    00000H
+                  @@INITL  h_com      FD576H    00000H
                   @@INITL  h_key_disp
-                                      FD574H    00000H
-                  @@INITL  h_main     FD574H    00000H
+                                      FD576H    00000H
+                  @@INITL  h_main     FD576H    00000H
                   @@INITL  h_protect
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INITL  h_rom_para2
-                                      FD574H    00000H
-                  @@INITL  M_buzz     FD574H    00000H
+                                      FD576H    00000H
+                  @@INITL  M_buzz     FD576H    00000H
                   @@INITL  m_compressor
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INITL  m_peripheral_control
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@INITL  m_key_operation
-                                      FD574H    00000H
-                  @@INITL  m_test     FD574H    00000H
-                  @@INITL  M_RTC      FD574H    00000H
-                  @@INITL  @rom       FD574H    00000H
-         @@DATAL                      FD574H    00000H  DSEG UNIT64KP
-                  @@DATAL  @cstart    FD574H    00000H
-                  @@DATAL  r_main     FD574H    00000H
+                                      FD576H    00000H
+                  @@INITL  m_test     FD576H    00000H
+                  @@INITL  M_RTC      FD576H    00000H
+                  @@INITL  @rom       FD576H    00000H
+         @@DATAL                      FD576H    00000H  DSEG UNIT64KP
+                  @@DATAL  @cstart    FD576H    00000H
+                  @@DATAL  r_main     FD576H    00000H
                   @@DATAL  r_systeminit
-                                      FD574H    00000H
-                  @@DATAL  r_cg_cgc   FD574H    00000H
+                                      FD576H    00000H
+                  @@DATAL  r_cg_cgc   FD576H    00000H
                   @@DATAL  r_cg_cgc_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATAL  r_cg_serial
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATAL  r_cg_serial_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATAL  r_cg_port
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATAL  r_cg_port_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATAL  r_cg_intc
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATAL  r_cg_intc_user
-                                      FD574H    00000H
-                  @@DATAL  r_cg_adc   FD574H    00000H
+                                      FD576H    00000H
+                  @@DATAL  r_cg_adc   FD576H    00000H
                   @@DATAL  r_cg_adc_user
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATAL  r_cg_timer
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATAL  r_cg_timer_user
-                                      FD574H    00000H
-                  @@DATAL  r_cg_wdt   FD574H    00000H
+                                      FD576H    00000H
+                  @@DATAL  r_cg_wdt   FD576H    00000H
                   @@DATAL  r_cg_wdt_user
-                                      FD574H    00000H
-                  @@DATAL  h_ad       FD574H    00000H
-                  @@DATAL  h_adg      FD574H    00000H
+                                      FD576H    00000H
+                  @@DATAL  h_ad       FD576H    00000H
+                  @@DATAL  h_adg      FD576H    00000H
                   @@DATAL  h_bat_ctrl
-                                      FD574H    00000H
-                  @@DATAL  h_com      FD574H    00000H
+                                      FD576H    00000H
+                  @@DATAL  h_com      FD576H    00000H
                   @@DATAL  h_key_disp
-                                      FD574H    00000H
-                  @@DATAL  h_main     FD574H    00000H
+                                      FD576H    00000H
+                  @@DATAL  h_main     FD576H    00000H
                   @@DATAL  h_protect
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATAL  h_rom_para2
-                                      FD574H    00000H
-                  @@DATAL  M_buzz     FD574H    00000H
+                                      FD576H    00000H
+                  @@DATAL  M_buzz     FD576H    00000H
                   @@DATAL  m_compressor
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATAL  m_peripheral_control
-                                      FD574H    00000H
+                                      FD576H    00000H
                   @@DATAL  m_key_operation
-                                      FD574H    00000H
-                  @@DATAL  m_test     FD574H    00000H
-                  @@DATAL  M_RTC      FD574H    00000H
-                  @@DATAL  @rom       FD574H    00000H
-         @@BITS                       FD574H    00000H  BSEG
-                  @@BITS   @cstart    FD574H.0  00000H.0
-                  @@BITS   r_main     FD574H.0  00000H.0
+                                      FD576H    00000H
+                  @@DATAL  m_test     FD576H    00000H
+                  @@DATAL  M_RTC      FD576H    00000H
+                  @@DATAL  @rom       FD576H    00000H
+         @@BITS                       FD576H    00000H  BSEG
+                  @@BITS   @cstart    FD576H.0  00000H.0
+                  @@BITS   r_main     FD576H.0  00000H.0
                   @@BITS   r_systeminit
-                                      FD574H.0  00000H.0
-                  @@BITS   r_cg_cgc   FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
+                  @@BITS   r_cg_cgc   FD576H.0  00000H.0
                   @@BITS   r_cg_cgc_user
-                                      FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
                   @@BITS   r_cg_serial
-                                      FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
                   @@BITS   r_cg_serial_user
-                                      FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
                   @@BITS   r_cg_port
-                                      FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
                   @@BITS   r_cg_port_user
-                                      FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
                   @@BITS   r_cg_intc
-                                      FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
                   @@BITS   r_cg_intc_user
-                                      FD574H.0  00000H.0
-                  @@BITS   r_cg_adc   FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
+                  @@BITS   r_cg_adc   FD576H.0  00000H.0
                   @@BITS   r_cg_adc_user
-                                      FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
                   @@BITS   r_cg_timer
-                                      FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
                   @@BITS   r_cg_timer_user
-                                      FD574H.0  00000H.0
-                  @@BITS   r_cg_wdt   FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
+                  @@BITS   r_cg_wdt   FD576H.0  00000H.0
                   @@BITS   r_cg_wdt_user
-                                      FD574H.0  00000H.0
-                  @@BITS   h_ad       FD574H.0  00000H.0
-                  @@BITS   h_adg      FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
+                  @@BITS   h_ad       FD576H.0  00000H.0
+                  @@BITS   h_adg      FD576H.0  00000H.0
                   @@BITS   h_bat_ctrl
-                                      FD574H.0  00000H.0
-                  @@BITS   h_com      FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
+                  @@BITS   h_com      FD576H.0  00000H.0
                   @@BITS   h_key_disp
-                                      FD574H.0  00000H.0
-                  @@BITS   h_main     FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
+                  @@BITS   h_main     FD576H.0  00000H.0
                   @@BITS   h_protect
-                                      FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
                   @@BITS   h_rom_para2
-                                      FD574H.0  00000H.0
-                  @@BITS   M_buzz     FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
+                  @@BITS   M_buzz     FD576H.0  00000H.0
                   @@BITS   m_compressor
-                                      FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
                   @@BITS   m_peripheral_control
-                                      FD574H.0  00000H.0
+                                      FD576H.0  00000H.0
                   @@BITS   m_key_operation
-                                      FD574H.0  00000H.0
-                  @@BITS   m_test     FD574H.0  00000H.0
-                  @@BITS   M_RTC      FD574H.0  00000H.0
-* gap *                               FD574H    02960H
+                                      FD576H.0  00000H.0
+                  @@BITS   m_test     FD576H.0  00000H.0
+                  @@BITS   M_RTC      FD576H.0  00000H.0
+* gap *                               FD576H    0295EH
          @@SEGREG                     FFED4H    00004H  DSEG AT
                   @@SEGREG @SEGREG    FFED4H    00004H
          @@RTARG0                     FFED8H    00008H  DSEG AT

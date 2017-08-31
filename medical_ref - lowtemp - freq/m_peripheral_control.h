@@ -11,6 +11,7 @@ extern void door_heat_RL_out(void);
 extern void inside_fan_control(void);
 extern void fan_RL_out(void);
 extern void led_control(void);
+extern void liquid_led_control(void);
 extern void led_on_delaytime(void);
 extern void led_RL_out(void);
 extern void remote_alarm_lamp(void);

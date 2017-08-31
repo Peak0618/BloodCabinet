@@ -364,6 +364,7 @@ void main_loop(void)
         mode_selection();
         led_control();
     }
+    liquid_led_control();
     //----------------------------------
     if (bflg_ad_calc_ok == 1)
     {
@@ -408,7 +409,7 @@ void main_loop(void)
     
     //----------------------------------
     bat_con_check_again();  //peak add
-    buzz_sound_priority(); //不同响声的优先级
+    //buzz_sound_priority(); //不同响声的优先级
     
     //血液相关
     defrosting_control();
@@ -451,6 +452,7 @@ void timer_op(void)      //定时程序，在主循环程序中调用
         com_485_bus_switch();          //485总线地址切换
 
         RTC_write_read_enable();        
+        buzz_sound_priority(); //不同响声的优先级
 
     }
     //------------------------------------------------------
@@ -493,6 +495,7 @@ void timer_op(void)      //定时程序，在主循环程序中调用
         }
         
 	    buzz_loop_tick_delaytime();         //滴滴声延时程序
+	    
     }
     //------------------------------------------------------
     if (guc_100ms_timer == 0)

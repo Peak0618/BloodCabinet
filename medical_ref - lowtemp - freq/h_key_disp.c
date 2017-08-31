@@ -237,16 +237,19 @@ void led_disp1_deal(void)
     } 
     else if (guc_disp_mode == DISP_LOCKED)     //如果是锁定模式
     {
-        if ((flag_view_error_code == 0)) 
+        if (guc_key_val == KEY_BUZ)   
+        {
+            bflg_remote_alarm_test = 1;
+            guc_buzz_sound_cnt = 3;     //李帆注释
+        }
+        //----------------------------------------------------------
+        if (flag_view_error_code == 0) 
         {
             if((flg_alarm1.uword != 0) || (flg_alarm2.uword != 0))
             {
                 if (guc_key_val == KEY_BUZ)                       				      
                 {
                     flag_view_error_code = 1;	
-
-                    bflg_remote_alarm_test = 1;
-                    guc_buzz_sound_cnt = 3;     //李帆注释
                 }
             }
             //-------------------------------------------------------
@@ -1526,7 +1529,7 @@ void read_key_delaytime(void) //读键延时程序，在10ms定时程序中调用
     if (bflg_read_key_delaytime == 1)
     {
         gss_read_key_delaytimer++;
-        if (gss_read_key_delaytimer >= 100)  // 200*10 = 2000ms = 2s 改为1s
+        if (gss_read_key_delaytimer >= 100)  // 100*10 = 1000ms = 1s 改为1s
         {
             gss_read_key_delaytimer = 0;
             bflg_read_key_delaytime = 0;

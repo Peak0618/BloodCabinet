@@ -140,7 +140,7 @@ void protect_high_TUTD_delaytime(void)
     }
     else
     {
-        if((gss_TU < gss_user_set_parm_value[DISP_USER_SET_ALH]-5)&&(gss_TD < gss_user_set_parm_value[DISP_USER_SET_ALH]-5))
+        if((gss_TU < gss_user_set_parm_value[DISP_USER_SET_ALH])&&(gss_TD < gss_user_set_parm_value[DISP_USER_SET_ALH]))
         {
             gss_TUTD_high_delaytimer++;
             if (gss_TUTD_high_delaytimer >= 60)   //60s
@@ -183,7 +183,7 @@ void protect_low_TUTD_delaytime(void)
     }
     else
     {
-        if((gss_TU > gss_user_set_parm_value[DISP_USER_SET_ALL]+5)&&(gss_TD > gss_user_set_parm_value[DISP_USER_SET_ALL]+5))
+        if((gss_TU > gss_user_set_parm_value[DISP_USER_SET_ALL])&&(gss_TD > gss_user_set_parm_value[DISP_USER_SET_ALL]))
         {
             gss_TUTD_low_delaytimer++;
             if (gss_TUTD_low_delaytimer >= 60)   //60s
